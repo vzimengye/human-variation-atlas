@@ -1,0 +1,324 @@
+--- PAGE 1 ---
+ Lecture 1&2 
+ 1.  DNA: 
+ a.  human body <- cells <- deoxyribonucleic acid - DNA (genetic information encoded in) 
+ b.  4 different types of bases/  nucleotides  : cytosine [C], guanine [G], adenine [A], thymine [T] 
+ c.  double-helix structure (Double stranded: Information redundant) 
+ d.  A&T, C&G -  base-pairs  (bp); connected by  hydrogen bonds 
+ e.  DNA Sequences 
+ i.  string of 10 nucleotides 
+ ii.  Human genome: 3.2 billion bp long 
+ iii.  length measure: 1 kilobase (kb) = 1,000 bp; 1 megabase (Mb) = 1 million bp = 1,000 kb; 1 
+ gigabase (Gb) = 1 billion bp = 1,000 Mb1 kb = 1,000 bp 
+ iv.  37 trillion cells in the human body 
+ f.  Chromosomes: 
+ i.  DNA: is divided into 23 chromosomes; Chromosomes = DNA + proteins (mainly histones). 
+ ii.  Become visible when condensed (e.g., during cell division). 
+ iii.  Located in the nucleus; outside is cytoplasm. 
+ iv.  Special chromosomes: X and Y = sex chromosomes. 
+ g.  Important biological molecules: 
+ i.  Nucleotides 
+ ii.  Lipids 
+ iii.  Carbohydrates 
+ iv.  Proteins 
+ 1.  chains of amino acids; 22 types; typical protein length: hundreds 
+ 2.  complex 3D shapes, structure determines function; amino acids: beads on a string that fold 
+ and tangle into a specific shape 
+ 3.  Keratin  ⻆蛋⽩ : hair structure, strong links(disulfide bonds), weak links(saline&hydrogen) 
+ 4.  Hemoglobin  ⾎红蛋⽩ : Each red blood cell contains hundreds of millions of hemoglobin 
+ molecules, which transport oxygen; Oxygen binds to the heme groups on hemoglobin. 
+ 5.  Lactase  : (a kind of enzyme) Lactose→Glucose+Galactose (no: lactose intolerance) 
+ 6.  Enzymes  : proteins that catalyze chemical reactions 
+ h.  Transcription&Translation 
+ i.  Transcription (DNA → messenger mRNA) -  occurs in nucleus 
+ 1.  RNA polymerase synthesizes pre - mRNA. 
+ 2.  RNA uses U instead of T; e.g. DNA ATCGTTC → RNA AUCGUUC. 
+ 3.  Other proteins (e.g., transcription factors) regulate when/how much RNA is made. 
+ ii.  mRNA processing 
+ 1.  Introns removed, exons spliced together. 
+ 2.  Mature mRNA exits the nucleus → ribosome. 
+ iii.  Translation (mRNA → protein) - occurs in ribosomes 
+ 1.  Codon = 3 nucleotides = 1 amino acid 
+ 2.  Start codon = Met; Only sequence from first start codon → first stop codon is translated 
+ iv.  Genetic code: 64 codons, 61 code for amino acids, 3 are STOP 
+ 1.  Redundancy: multiple codons → same amino acid (e.g., GUU & GUC → Val). 
+ i.  Expression 
+ i.  Expression level: Amount of mRNA produced 
+
+
+--- PAGE 2 ---
+ ii.  regulated by cell using … mechanisms (e.g. special proteins called transcription factors) 
+ j. 
+ k.  Locus:  any position in the genome including one or more nucleotides that can harbor one or more 
+ alleles. Sometimes used only to refer to protein coding genes. 
+ l.  Allele:  a specific variant in a locus (e.g. A vs. a); May represent variation at a single site or in 
+ multiple sites of the DNA molecule. 
+ m.  Mutation: 
+ i.  a change in allelic state (typically during production of germ cells). [*point mutation] 
+ 1.  e.g. sickle-cell anemia allele 镰⼑型贫⾎  of the hemoglobin gene 
+ 2.  e.g.  Cystic Fibrosis  (CF) – Causes 
+ a.  mutation: ΔF508 codon deletion 
+ b.  full name: cystic fibrosis transmembrane conductance regulator (CFTR). 
+ c.  autosomal recessive → a person must inherit two mutated alleles to have the disease. 
+ d.  About 30,000 people in the U.S.;  1 million people carriers; most common:  European 
+ 3.  Haploid: one copy of the DNA 
+ 4.  Diploid: two copies of the DNA 
+ ii.  Some mutations cause severe disease, but most have little or no measurable effect. 
+ iii.  Humans have about 20,000 protein - coding genes, each usually only a few thousand base 
+ pairs long → the chance of hitting a critical amino acid is small. 
+ iv.  Human mutation rate ≈  1.2 × 10 ⁻ ⁸  per base pair per generation. 
+ 1.  DNA passed from parents to offspring contains roughly ______ new mutations. 
+ a.  Mutation rate: 1.2 × 10 ⁻ ⁸; Genome size: 3.2 × 10⁹ 
+ b.  3.2 × 10⁹ × 1.2 × 10 ⁻ ⁸ = 38.4 new mutations 
+ n.  Vocab: 
+ i.  Polymorphism 多态性 : A locus that is genetically variable in the population 
+ ii.  Genotype 基因型 : The combination of alleles at a locus in an individual (e.g., Aa) 
+ iii.  Homo  zygous 纯合 : Genotypes AA or aa /  Hetero  zygous 杂合 : Genotype Aa 
+ iv.  SNP (single nucleotide polymorphism) 单核苷酸多态性 : A mutation affecting a single nucleotide 
+ site; also called a segregating site 
+ v.  Haplotype 单倍型 : A specific haploid DNA sequence found in one or more individuals 
+ o.  Genotypes (AA, Aa, aa) 
+ p.  Alleles (A, a) - can be variants of a gene, a nucleotide site, or other types of variation 
+ q.  Mendel’s laws: 
+ i.  The law of segregation: In the production of gametes, each of the two parental alleles are 
+ transmitted into a gamete (and hence to the next generation) with equal probability 
+ r.  Mendel’s law 
+
+
+--- PAGE 3 ---
+ i.  The law of Segregation: In the production of gametes, each of the two parental alleles are 
+ transmitted into a gamete (and hence to the next generation) with equal probability 
+ ii.  The law of Independent Assortment: Alleles at different loci are transmitted independently of 
+ each other 
+ Mendel’s first law                                                      Mendel’s second law 
+ iii.  Recombination  : exchange of DNA between maternally and paternally inherited copies of DNA 
+ during meiosis. 
+ iv.  mtDNA  : DNA located in the mitochondria (which doesn’t recombine and is effectively haploid). 
+ 1.  Mutates fast at a rate of 7× 10−6 per bp per generation. 
+ 2.  Only inherited maternally; Is effectively haploid; No recombination 
+ Lecture 3: Natural Selection and Genetic Drift 
+ 1.  Natural selection: 
+ a.  Charles Darwin: natural selection; some survive and others don’t 
+ b.  Example of black moth VS mottled white moth: pesticide resistance 
+ c.  Example of HIV 变异  
+ d.  Example of pocket mouse: Light fur/ dark fur 
+ 2.  Fitness: 
+ a.  High fitness: propensity for more copies of alleles left in generation 
+ b.  Average property of alleles, genomes, genetic  variants, etc. 
+ c.  Specific to an environment and genomic context 
+ d.  High fitness does not imply ‘better’ in any other way than heritable propensity for a large number of 
+ descendants. No value implied. 
+ e.  Work either through survivorship or reproduction; “Survival of the fittest” is not quite true. 
+ 3.  Evolution by Natural Selection may occur if mutations arise that lead to differences in fitness 
+ 4.  Allele frequencies: 
+
+
+--- PAGE 4 ---
+ a.  Allele frequencies change after reproduction ⇐  genetic drift 
+ i.  Why? => Natural selection/ The randomness of reproduction 
+ ii.  What is likely to happen in the long run if there is only genetic drift and the initial allele frequency 
+ is 50%? => The allele frequency will eventually become 0 or 1 
+ 5.  Genetic drift: acting on neutral mutations that do not affect fitness 
+ a.  Genetic variability  is caused by genetic drift (and other forces) acting on mutations. 
+ b.  Genetic drift is the random sampling of alleles between generations caused by  random segregation 
+ and random production of offspring  .  => the “Why?” part above 
+ c.  Genetic drift causes changes in allele frequencies through time but  does not favor one allele over 
+ another  . 
+ d.  Small population more effect than large population 
+ e.  Fixation VS Loss  ; within them: Gene-flow/Migration 
+ 6.  Natural Selection is caused by differences in fitness (per definition heritable) 
+ a.  Influence of genetic drift: 
+ i.  Positive selection/ negative selection/ no selection 
+ 7.  Overdominance is a form of Balancing Selection, i.e. selection that maintains variability in the population. 
+ 8.  Summary: 
+ Lecture 4 
+ 1.  What phylogenies are/ How they relate to DNA/ How they are found/ Why we should care 
+ 2.  Phylogenetics: the study of evolutionary trees 
+ 3.  Tree vocabulary: 
+ a.  Definition: Units of taxonomic interest, typically species. 
+ b.  Domain -> kingdom -> phylum -> class -> order -> family -> genus -> species -> subspecies 
+ c.  Monophyletic group (clade)  : a group of taxa that share a most recent common ancestor not shared 
+ with any other taxa 
+
+
+--- PAGE 5 ---
+ 4.  rooted VS. unrooted 
+ 5.  Estimating trees from DNA sequences 
+ a.  Parsimony 最少突变 :  find the tree that requires the fewest possible number of mutations. 
+ b.  Probabilistic methods ⽤进化模型找最可能的树   (Likelihood and Bayesian): Model the evolution of 
+ DNA sequences and use statistical principles to find the tree with most statistical support. Similar to 
+ parsimony but can take biases of mutational process and multiple mutations on a lineage into account 
+ c.  Distance based methods ⽤序列差异拼树 :  calculate the number of mutational differences between all 
+ pairs of sequences and puzzled together the tree. 
+ d.  e.g. Human-chimp sequence divergence: 100 differences; Human-baboon sequence divergence: 400 
+ differences; Human-baboon divergence time: 25 million years 
+ i.  mutation rate: μ=d/2t=400/(2×25×10^6)=8×10^(−6) 
+ ii.  human-chimp divergence time: t=d/2μ=100/(2×8×10^(−6))=6.25×10^6 
+ 6.  Examples 
+ a.  Hawai: Honeycreepers 蜂⻦雀  & Fruitflies 果蝇 ; 岛屿年龄越⽼  → 物种越早分化 ; 分离越久  → 积累的突变  
+ 越多  → 遗传差异越⼤  
+ b.  HIV: 突变率极⾼  → 可以⽤分⼦钟精确推断传播历史 ; ( ⽛医  → 病⼈传播 ) 系统树可以⽤来判断疾病传播链  
+ c.  SARS-CoV-2 早期全球传播树  
+ d.  现代⼈类起源于⾮洲  
+
+
+--- PAGE 6 ---
+ Lecture 5: Analyses of DNA data 
+ 1.  Why phylogenies are not enough; Quantifying genetic 
+ variability; Effective population sizes; Quantifying 
+ genetic divergence between populations 
+ 2.  Calculate π  (average number of pairwise differences) 
+ a.  ( 每两个之间⽐较 ) ( ⻅图 )---------->>>>>>>>>>> 
+ 3.  Quantifying the amount of genetic variability 
+ a.  Number of segregating sites (S) ( 这个是例如上⾯的  
+ 2+2+1+0…) 
+ b.  Average number of pairwise differences (π) 
+ c.  Both can be used to estimate  θ = 4Nμ  , where N is the population size  and μ is the mutation rate 
+ d.  π’s expect on average = θ -> can find a guess of what θ might be by calculating π 
+ 4. 
+ 5.  2 individual’s: 
+ 6.  The amount of variability in the population is proportional to: 1. population size (N); 2. mutation rate (μ) 
+ 7.  some assumptions: The population is of constant size; No natural selection; No population structure 
+ 8.  Effective population size (Ne)  : The number of individuals in  an idealized population  that would 
+ generate the same amount of variability (e.g. π or S) as what we have observed in the real population. 
+ a.  This “Ne” 
+ i.  May not reflect actual number of individuals today 
+ ii.  Affected by past changes in population size and many other factors 
+ iii.  Is really a summary of the amount of genetic variability in the group of individuals being studied 
+ iv.  跨物种⽐较： π 越⼤  → Nₑ 越⼤；跨⼈类族群⽐较：⾮洲族群遗传多样性最⾼  → Nₑ 最⼤；跨时  
+ 间⽐较：历史⼈⼝瓶颈会降低  Nₑ ，降低  π 
+ 9.  Mean&Variance 
+ a. 
+
+
+--- PAGE 7 ---
+ 10.  F  ST  : Genetic variation measurement                                        Alternative definition 
+ a.  Can range from 0 (no genetic differentiation) to 1 (fixation of alternative alleles). 
+ b.  Wright’s Guidelines: 
+ i.  0 - 0.05, little differentiation; 0.05 – 0.15, moderate; 0.15 – 0.25, great; > 0.25, very great 
+ c.  e.g. North-Atlantic Humpback Whale: 0.036; Asian Elephant: 0.071/0.038; Giant Panda: 0.07/0.18 
+ d.  ⼈类族群之间的分化程度很低，差异远⼩于⼤多数动物  
+ 族群之间的差异；⼈类的遗传差异主要是个体差异，⽽  
+ 不是族群差异。  
+ 11.  Summary( 旁边的图！ ) ----------------------------->>>>>>>>> 
+ 12.  Admixture analyses 
+ a.  Assume the existence of 
+ “ancestry groups”. 
+ b.  For each such hypothetical 
+ ancestry group, estimate 
+ the allele frequencies. 
+ c.  For each individual, 
+ simultaneously estimate 
+ the fractional membership 
+ of each ancestry group. 
+ d.  “Kennewick Man” or the “Ancient One” 
+ i.  Kennewick Man 的外形（头⻣形态）曾被误认为 “ ⾮美洲原住⺠ ” ，但基因祖源分析明确显⽰他与  
+ 现代美洲原住⺠⾼度相关；外形  ≠ 祖源，基因才是判断祖源的可靠⽅式。  
+ e.  Warnings: 
+ i.  Can be sensitive to sample sizes. What you put in is what you get out 
+ ii.  Ancestry components are statistical constructs that may not necessarily reflect populations that 
+ ever existed in real life. 
+ 13.  Principal Component Analysis (PCA) 
+ a.  Extracts different features of the data, called principal components (PCs). (~axes of variation) 
+ b.  First PC (PC1)  : explain as much of the variance among individuals as possible. 
+ c.  Second PC (PC2)  : explain as much of the variance as possible (not explained by the PC1, etc.) 
+ d.  Researchers often focus mostly on the first two PCs. Each individual can be assigned a value 
+ corresponding to each of these two PCs. 
+ e.  Warnings: 
+ i.  sensitive to sample sizes. What you put in is what you get out. 
+ ii.  A single XY plot reflects just some of the variation. 
+ iii.  Does not explain the causes of variation (population divergence, 
+ gene-flow, etc). 
+ Lecture 6 
+ 1.  Tree of life/ animals/ vertebrates/ 
+ mammals/ primates 
+ 2.  Human characteristics 
+ a.  Erect bipedal walk/ 
+ b.  Skeleton changes 
+ c.  Cranial changes 
+ d.  Human enlarged brain size 
+
+
+--- PAGE 8 ---
+ Ardipithecus  地猿属  
+ (canine- ⽝⻮ ) 
+ Tools: likely but no direct evidence/ Diet more diverse/ Competent at upright walk 
+ Homo floresiensis - Ling Bua Cave 
+
+
+--- PAGE 9 ---
+ 3.  Human has enlarged brain size 
+ a.  Australopithecine brain size of 400 cubic cm is about the same as a 
+ modern chimpanzee. 
+ b.  Homo erectus had 700 cubic cm brains. 
+ c.  Homo sapiens has 1400 cubic cm brains. 
+ d.  Use larger human brain works: 
+ 4.  Fire use 
+ a.  Protect from cold/ predators 
+ b.  Food access++ (can’t digest/ can’t get nutrition without cooked) 
+ c.  First fire use possible maybe 1.5-1.6 million years ago or even earlier 
+ d.  Definite use 300k years ago 
+ Lecture 7 
+ 1.  Review Add: 
+ a.  ( 右图 ) 
+
+
+--- PAGE 10 ---
+ b.  Reification: The fallacy of treating an immaterial abstraction as something concrete real. 
+ c.  Mal'ta–Buret' culture 
+ 2.  Interbreeding? 
+ a.  Open question if humans and Neanderthals cohabitated 
+ b.  Overlap in their geographical ranges and time of existence 
+ c.  Some late Neanderthal groups adopted cultural traits that might have been influenced by modern 
+ humans 
+ d.  hybrid? -> Analysis of the skeletal remains of Lagar-Velho four-year-old boy has revealed that he may 
+ be a Neandertal-Cro-Magnon hybrid. 
+ 3.  ABBA-BABA test 
+ a.  Neanderthals to Non Africans: 3-5% more ABBA than BABA 
+ b.  现代⾮⾮洲⼈群的基因组中 , 2.9% 源⾃尼安德特⼈  
+ c.  杂交⽚段 : T=1 整条尼安德特染⾊体 ; T=100 只剩下散落在基因组中的微⼩⽚段  
+ d.  Kostenki 14 体内有⽐现代⼈更⻓、更多的 Neanderthal 基因⽚段 ; Bacho Kiro: 6 代内就有尼安德特⼈祖  
+ e.  杂交  
+ Lecture 8 
+ 1.  Aboriginal Australian origins 
+ a.  Mungo man:  Lake Mungo remains of three individuals/ Oldest remains approx. 40,000 years old/ 
+ Repatriated and reburied in 2022 
+ b.  Geneticists/paleontologists: Anatomically modern humans originated in Africa, migrated out of Africa 
+ approx. 65k years ago and quickly reached Australia. 
+
+
+--- PAGE 11 ---
+ c.  Dreamtime knowledge: Aboriginal Australians have always been on this land – since Dreamtime. 
+ d.  Scientific truth VS. VS. Indigenous Believe VS. Reconcile ->  Epistemic diversity 认识多样性  
+ 2.  Human Genome Diversity Project 
+ 3.  DNA studies on Havasupai individuals 
+ a.  In 1989 researchers from Arizona State University collected DNA from Havasupai tribe members. 
+ b.  Informed consent was obtained to study diabetes. 
+ c.  However, the samples were also used to investigate mental disorders such as 
+ schizophrenia without the consent of the study participants. 
+ d.  In 2010 the Havasupai tribe sued and won a settlement out of court. 
+ 4.  Denisovans  - 是⼈族中⼀个已经灭绝的⽀系，是尼安德特⼈的 “ 姐妹群 ” 
+ a.  Denisova Cave 
+ 5.  Tibetan altitude adaptation 藏族⾼原适应  
+ a.  Oxygen deprivation => Increased production of red blood cells => Blood becomes thicker => 
+ Increased chance of stroke 
+ b. 
+ Lecture 9 
+ 1.  Europe: Last Ice Age 
+ 2.  右图 ---------------------------------------------->>>>>>>>>> 
+
+
+--- PAGE 12 ---
+ 3.  Aurignacian culture (43 kbp -26 kbp) 
+ 4.  Gravettian culture (33 kbp - 22 kbp) 
+ 5.  Magdalenian culture (17 kbp – 12 kbp) 
+ 6.  Multiple Mesolithic cultures (17 kbp 12 kbp) 
+ 7.  Meanwhile in the Middle East -  Natufian culture 15,000 to 11,500 years ago 
+
+
+--- PAGE 13 ---
+ 8.  Transition to the Neolithic 
+ 9.  Corded Ware Culture (3,000 BCE – 2,350 BCE) (above) 
+ 10.  Bell Beaker Culture (2,900 BCE – 1,800 BCE) 
+ 11.  Roman Empire 
+
