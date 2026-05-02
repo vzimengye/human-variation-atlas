@@ -11,7 +11,7 @@ function NavBar() {
   return (
     <header className="topbar">
       <NavLink to="/" className="brand">
-        <img className="brand-mark" src="/site-icon.svg" alt="" aria-hidden="true" />
+        <img className="brand-mark" src="/pictures-icon/atlas-icon.png" alt="" aria-hidden="true" />
         <span>
           Human Variation Atlas
           <small>Evidence. Context. Humanity.</small>

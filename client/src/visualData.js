@@ -7,20 +7,20 @@ export const visualAssets = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Convergent_evolution_human_skin_color_map.svg/1280px-Convergent_evolution_human_skin_color_map.svg.png',
   lactaseMap:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Lactase_persistence_in_the_Old_World.svg/1280px-Lactase_persistence_in_the_Old_World.svg.png',
-  lactoseDairy: '/lactose-tolerance-dairy.svg',
-  sickleCells: '/sickle-cell-cells.svg',
+  lactoseDairy: '/pictures-traits/lactose-tolerance.png',
+  sickleCells: '/pictures-traits/sickle-cell.png',
   iconSkinColor: '/icon-skin-color.svg',
   iconLactose: '/icon-lactose.svg',
   iconSickle: '/icon-sickle.svg',
   iconHairTexture: '/icon-hair-texture.svg',
   iconAncestry: '/icon-ancestry.svg',
-  ancestryAdmixtureMap: '/ancestry-admixture-map.svg',
-  quizFeedbackPeople: '/quiz-feedback-people.svg',
+  ancestryAdmixtureMap: '/pictures-traits/ancestry-and-admixture.png',
+  quizFeedbackPeople: '/pictures-quiz/quiz.png',
   ancestryMap:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Principal_component_analysis_of_world_populations.png/1280px-Principal_component_analysis_of_world_populations.png',
   dna:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/DNA_orbit_animated_static.png/960px-DNA_orbit_animated_static.png',
-  hairTexture: '/hair-texture-panel.svg',
+  hairTexture: '/pictures-traits/hair-texture.png',
 };
 
 export const homeFeatureNotes = [

@@ -77,7 +77,7 @@ function HomePage() {
         </div>
 
         <div className="figure-panel">
-          <img src="/home-hero.svg" alt="Four overlapping human profiles with a globe behind them" />
+          <img src="/pictures-homepage/homepage.png" alt="Four overlapping human profiles with a globe behind them" />
         </div>
       </section>
 
