@@ -5,19 +5,19 @@ import { visualAssets } from '../visualData';
 
 const mosaicImages = {
   'skin-color': visualAssets.hands,
-  'lactose-tolerance': visualAssets.lactaseMap,
-  'sickle-cell': visualAssets.microscope,
+  'lactose-tolerance': visualAssets.lactoseDairy,
+  'sickle-cell': visualAssets.sickleCells,
   'hair-texture': visualAssets.hairTexture,
-  'ancestry-and-admixture': visualAssets.ancestryMap,
+  'ancestry-and-admixture': visualAssets.ancestryAdmixtureMap,
   atlas: visualAssets.skinMap,
 };
 
 const fallbackNotes = {
-  'skin-color': 'Skin color is an adaptation to environment, not a measure of intelligence, behavior, or human worth.',
-  'lactose-tolerance': 'A trait can appear in different places for similar reasons. That does not mean it belongs to one race.',
-  'sickle-cell': 'Genes can involve trade-offs. Their meaning depends on environment, not racial labels.',
-  'hair-texture': 'Visible traits can feel obvious, but they are not simple biological boundaries.',
-  'ancestry-and-admixture': 'There are no pure biological populations. Human ancestry is connected and mixed.',
+  'skin-color': 'Skin color is biological, but it is not a biological race label.',
+  'lactose-tolerance': 'A trait can evolve in different populations for similar reasons. That does not make it racial.',
+  'sickle-cell': 'Some traits are shaped by environmental pressure. Race is not the real explanation.',
+  'hair-texture': 'Hair texture is real human variation, but it is not a racial border.',
+  'ancestry-and-admixture': 'There are no pure human groups. Human ancestry is connected, layered, and mixed.',
 };
 
 const traitOrder = [
@@ -36,7 +36,11 @@ function ExplorePage() {
     api
       .get('/traits')
       .then((response) => {
-        const orderedTraits = [...response.data].sort(
+        const latestTraitsBySlug = new Map();
+        response.data.forEach((trait) => {
+          latestTraitsBySlug.set(trait.slug, trait);
+        });
+        const orderedTraits = [...latestTraitsBySlug.values()].sort(
           (left, right) => traitOrder.indexOf(left.slug) - traitOrder.indexOf(right.slug)
         );
         setTraits(orderedTraits);
@@ -45,7 +49,7 @@ function ExplorePage() {
   }, []);
 
   const filteredTraits = traits.filter((trait) => {
-    const text = `${trait.title} ${trait.summary} ${trait.category} ${trait.keyQuestion}`.toLowerCase();
+    const text = `${trait.title} ${trait.subtitle} ${trait.summary} ${trait.category} ${trait.keyTakeaway}`.toLowerCase();
     return text.includes(search.toLowerCase());
   });
 
@@ -85,15 +89,16 @@ function ExplorePage() {
             <div className="trait-row-copy">
               <p className="eyebrow">{trait.category}</p>
               <h2>{trait.title}</h2>
+              <h3>{trait.subtitle}</h3>
               <p>{trait.summary}</p>
               <div className="takeaway-box">
                 <strong>Key takeaway</strong>
-                <span>{fallbackNotes[trait.slug] || trait.betterFraming}</span>
+                <span>{trait.keyTakeaway || fallbackNotes[trait.slug] || trait.betterFraming}</span>
               </div>
+              <Link to={`/traits/${trait.slug}`} className="button small-button">
+                View details <span aria-hidden="true">-&gt;</span>
+              </Link>
             </div>
-            <Link to={`/traits/${trait.slug}`} className="button small-button">
-              View details <span aria-hidden="true">-&gt;</span>
-            </Link>
           </article>
         ))}
       </section>

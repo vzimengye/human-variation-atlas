@@ -27,29 +27,13 @@ export const attemptsStore = createStore('quiz-attempts.db');
 export const reflectionsStore = createStore('reflections.db');
 
 export async function initializeDatabase() {
-  await traitsStore.remove(
-    { slug: { $nin: seedTraits.map((trait) => trait.slug) } },
-    { multi: true }
-  );
-
+  await traitsStore.remove({}, { multi: true });
   for (const trait of seedTraits) {
-    await traitsStore.update(
-      { slug: trait.slug },
-      { $set: trait },
-      { upsert: true }
-    );
+    await traitsStore.insert(trait);
   }
 
-  await quizStore.remove(
-    { prompt: { $nin: seedQuizQuestions.map((question) => question.prompt) } },
-    { multi: true }
-  );
-
+  await quizStore.remove({}, { multi: true });
   for (const question of seedQuizQuestions) {
-    await quizStore.update(
-      { prompt: question.prompt },
-      { $set: question },
-      { upsert: true }
-    );
+    await quizStore.insert(question);
   }
 }

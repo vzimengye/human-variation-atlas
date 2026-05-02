@@ -2,17 +2,24 @@ export const seedTraits = [
   {
     slug: 'skin-color',
     title: 'Skin Color',
-    category: 'UV radiation adaptation',
+    category: 'Sunlight and adaptation',
+    subtitle: 'Skin color changes with sunlight, not racial boxes.',
+    summary:
+      'Skin color is one of the first traits people notice, so it is often used to guess someone\'s race. But biologically, skin color is better understood as an adaptation to ultraviolet radiation. In areas with stronger UV exposure, darker pigmentation can help protect the body. In areas with weaker UV exposure, lighter pigmentation can help the body produce vitamin D more easily.',
+    whatThisShows:
+      'Skin color does not change suddenly from one "race" to another. It varies gradually across geography. This means skin color can tell us something about adaptation and environment, but it cannot tell us a person\'s intelligence, personality, culture, or full ancestry.',
+    whyRaceTooSimple:
+      'Racial categories make skin color look like a fixed boundary. In reality, skin pigmentation is a continuous trait, and people with similar skin tones can have very different ancestry and histories.',
+    keyTakeaway:
+      'Skin color is biological, but it is not a biological race label.',
     keyQuestion:
       'How can skin color vary across geography without producing fixed biological races?',
-    summary:
-      'Skin color varies gradually across geography. One major factor is ultraviolet radiation: darker pigmentation can help protect the body in high-UV environments, while lighter pigmentation can help with vitamin D production in lower-UV environments.',
     whyItMatters:
-      'This trait helps visitors see that a visible feature can shift with ecology and adaptation while still failing to divide humanity into stable natural boxes.',
+      'Skin color varies gradually across geography and reflects adaptation to UV exposure.',
     commonMyth:
       'Skin color reveals a person\'s total biological ancestry or can sort humanity into a few natural races.',
     betterFraming:
-      'Skin color is an adaptation to environment, not a measure of intelligence, behavior, or human worth.',
+      'Skin color is biological, but it is not a biological race label.',
     scientificContext:
       'Jablonski and Chaplin explain the relationship between skin pigmentation and UV radiation adaptation. Skin color fits the broader point that one visible trait does not predict the rest of the genome.',
     methodsNote:
@@ -22,17 +29,24 @@ export const seedTraits = [
   {
     slug: 'lactose-tolerance',
     title: 'Lactose Tolerance',
-    category: 'Gene-culture coevolution',
+    category: 'Diet and evolution',
+    subtitle: 'Drinking milk as an adult is also an evolutionary story.',
+    summary:
+      'Most babies can digest milk, but not all adults can. Some people keep producing lactase, the enzyme that helps digest lactose, after childhood. This is called lactase persistence. It became more common in some populations with long histories of herding animals and using milk as food. Importantly, this trait developed independently in different populations, including groups in Africa and Europe.',
+    whatThisShows:
+      'Lactose tolerance is not owned by one race. It is connected to culture, diet, and environment. When different groups faced similar food practices, similar biological adaptations could appear in different places.',
+    whyRaceTooSimple:
+      'If we only use race, we miss the real explanation. The better question is not "What race has this trait?" but "What history, environment, and lifestyle made this trait useful?"',
+    keyTakeaway:
+      'A trait can evolve in different populations for similar reasons. That does not make it racial.',
     keyQuestion:
       'How can milk digestion become common in some populations without defining a race?',
-    summary:
-      'Some adults can digest milk because they keep producing lactase after childhood. This trait developed independently in different populations, especially in groups with histories of herding and milk use.',
     whyItMatters:
-      'Lactase persistence shows how cultural practices and population history can shape biology together.',
+      'Lactase persistence shows how culture, diet, and biology can shape each other.',
     commonMyth:
       'If a trait is common in one region, it must naturally define a race from that region.',
     betterFraming:
-      'A trait can appear in different places for similar reasons. That does not mean it belongs to one race.',
+      'A trait can evolve in different populations for similar reasons. That does not make it racial.',
     scientificContext:
       'Tishkoff et al. show that lactase persistence appeared in Africa and Europe through convergent adaptation: similar dietary and cultural pressures can produce similar adaptations independently.',
     methodsNote:
@@ -42,17 +56,24 @@ export const seedTraits = [
   {
     slug: 'sickle-cell',
     title: 'Sickle Cell Trait',
-    category: 'Malaria selection pressure',
+    category: 'Malaria history',
+    subtitle: 'This trait is about malaria history, not race.',
+    summary:
+      'Sickle cell trait is sometimes talked about as if it belongs to one racial group, but that is misleading. The trait is more common in some regions where malaria has historically been common. Carrying one copy of the sickle cell gene can give some protection against severe malaria, although inheriting two copies can cause sickle cell disease.',
+    whatThisShows:
+      'A gene can have different effects depending on the environment. In a malaria environment, carrying one copy of the sickle cell gene could be helpful. In another context, the same gene may be understood mainly through health risks.',
+    whyRaceTooSimple:
+      'Sickle cell trait is not limited to one race or one continent. It appears in different populations connected to malaria regions. So the pattern makes more sense through geography and disease environment than through racial labels.',
+    keyTakeaway:
+      'Some traits are shaped by environmental pressure. Race is not the real explanation.',
     keyQuestion:
       'What changes when a trait is explained through malaria ecology instead of race?',
-    summary:
-      'Sickle cell trait is often wrongly treated as a "racial" trait, but it is better understood through malaria. In places where malaria has been common, carrying one copy of the sickle cell gene can offer some protection against severe malaria.',
     whyItMatters:
-      'This case links genetics to natural selection: the trait persists because heterozygotes can have an advantage in malarial settings.',
+      'This case links genetics to natural selection and malaria environments.',
     commonMyth:
       'Sickle cell is a trait that belongs to one race.',
     betterFraming:
-      'Genes can involve trade-offs. Their meaning depends on environment, not racial labels.',
+      'Some traits are shaped by environmental pressure. Race is not the real explanation.',
     scientificContext:
       'Luzzatto explains the relationship between sickle cell trait and malaria selection pressure. Similar selective pressures can produce overlapping patterns across Africa, the Mediterranean, the Middle East, and South Asia.',
     methodsNote:
@@ -62,17 +83,24 @@ export const seedTraits = [
   {
     slug: 'hair-texture',
     title: 'Hair Texture',
-    category: 'Visible variation and classification',
+    category: 'Visible variation',
+    subtitle: 'Hair texture is visible, but visible does not mean simple.',
+    summary:
+      'Hair texture varies a lot among humans. Some hair is straight, some is wavy, some is curly, and some is tightly coiled. Because hair is easy to see, people often connect it to race very quickly. But hair variation is more complicated than everyday racial categories. Hair shape and pigmentation can be measured scientifically, but those measurements still do not create clean racial boundaries.',
+    whatThisShows:
+      'A visible trait can be real without being a good way to divide people. Hair texture can vary within the same population, and people placed in the same racial category do not all have the same hair. It is also shaped by biology, family history, and social meaning.',
+    whyRaceTooSimple:
+      'Race often turns hair into a symbol, not just a trait. People attach ideas about beauty, professionalism, identity, and belonging to hair. That means hair texture is both biological and social, but it should not be treated as proof of fixed biological race.',
+    keyTakeaway:
+      'Hair texture is real human variation, but it is not a racial border.',
     keyQuestion:
       'Why can a visible trait feel socially obvious while still failing to create a clean biological boundary?',
-    summary:
-      'Hair texture varies widely among humans. People often connect hair to race because it is visible, but hair shape and pigmentation are more complicated than everyday racial categories make them seem.',
     whyItMatters:
-      'Hair texture helps visitors separate social recognition from biological classification. Visible traits can matter socially without forming fixed natural groups.',
+      'Hair texture shows how a trait can be biological and socially meaningful without creating racial borders.',
     commonMyth:
       'Hair texture can sort people into simple biological races.',
     betterFraming:
-      'Visible traits can feel obvious, but they are not simple biological boundaries.',
+      'Hair texture is real human variation, but it is not a racial border.',
     scientificContext:
       'Lasisi et al. studied variation in human scalp hair fiber shape and pigmentation, making hair texture a useful example of how visible traits vary without clean racial borders.',
     methodsNote:
@@ -81,18 +109,25 @@ export const seedTraits = [
   },
   {
     slug: 'ancestry-and-admixture',
-    title: 'Ancestry and Admixture',
-    category: 'Migration, mixing, and history',
+    title: 'Ancestry & Admixture',
+    category: 'Movement and mixing',
+    subtitle: 'Human history is a history of movement.',
+    summary:
+      'Ancestry can tell us something about where our ancestors may have lived, moved, and mixed. But human populations have never been completely separate or pure. Migration and gene flow have connected groups across time, and admixture is part of human history.',
+    whatThisShows:
+      'Ancestry is not the same thing as race. Race is usually a broad social label, while ancestry is about patterns of family and population history. Even ancestry DNA results are estimates based on comparison groups, not a final truth about who someone "really" is.',
+    whyRaceTooSimple:
+      'Racial categories often make people seem like they belong to separate biological boxes. But human ancestry is much messier than that. People have moved, mixed, separated, and reconnected for thousands of years.',
+    keyTakeaway:
+      'There are no pure human groups. Human ancestry is connected, layered, and mixed.',
     keyQuestion:
       'Why should ancestry not be treated as the same thing as race?',
-    summary:
-      'Human populations have never been completely separate. Migration, mixing, and shared history have shaped human ancestry for a long time. Ancestry can tell us something about family history and population history, but it should not be treated as the same thing as race.',
     whyItMatters:
-      'This section moves beyond visible traits and addresses broader questions about identity, belonging, migration, and the ethics of interpreting genetic data.',
+      'Ancestry is about family and population history, not fixed racial truth.',
     commonMyth:
       'DNA can reveal pure peoples or make appearance equal to ancestry.',
     betterFraming:
-      'There are no pure biological populations. Human ancestry is connected and mixed.',
+      'There are no pure human groups. Human ancestry is connected, layered, and mixed.',
     scientificContext:
       'Korunes and Goldberg discuss human genetic admixture and how migration and gene flow shape human genetic variation. Ancestry components are useful statistical tools, not pure biological peoples.',
     methodsNote:

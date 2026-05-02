@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { api, fetchWikipediaSummary } from '../api';
+import { api } from '../api';
 import { visualAssets } from '../visualData';
 
 const detailMaps = {
@@ -14,7 +14,6 @@ const detailMaps = {
 function TraitPage() {
   const { slug } = useParams();
   const [trait, setTrait] = useState(null);
-  const [wikiSummary, setWikiSummary] = useState('');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -22,7 +21,6 @@ function TraitPage() {
 
     async function loadTrait() {
       setLoading(true);
-      setWikiSummary('');
       const traitResponse = await api.get(`/traits/${slug}`);
       if (!isActive) {
         return;
@@ -30,21 +28,6 @@ function TraitPage() {
 
       setTrait(traitResponse.data);
       setLoading(false);
-
-      try {
-        const summary = await Promise.race([
-          fetchWikipediaSummary(traitResponse.data.wikipediaTitle),
-          new Promise((resolve) => {
-            setTimeout(() => resolve(''), 4000);
-          }),
-        ]);
-
-        if (isActive && summary) {
-          setWikiSummary(summary);
-        }
-      } catch (error) {
-        console.error(error);
-      }
     }
 
     loadTrait().catch((error) => {
@@ -77,56 +60,28 @@ function TraitPage() {
         <div className="detail-hero-copy">
           <p className="eyebrow">{trait.category}</p>
           <h1>{trait.title}</h1>
+          <h2>{trait.subtitle}</h2>
           <p>{trait.summary}</p>
-          <div className="takeaway-box">
-            <strong>Central question</strong>
-            <span>{trait.keyQuestion}</span>
-          </div>
         </div>
       </section>
 
       <section className="detail-grid">
         <article className="detail-card highlight">
-          <h4>Why it matters</h4>
-          <p className="soft-copy">{trait.whyItMatters}</p>
+          <h4>What this shows</h4>
+          <p className="soft-copy">{trait.whatThisShows}</p>
         </article>
         <article className="detail-card">
-          <h4>Common myth</h4>
-          <p className="soft-copy">{trait.commonMyth}</p>
-        </article>
-        <article className="detail-card">
-          <h4>Better framing</h4>
-          <p className="soft-copy">{trait.betterFraming}</p>
-        </article>
-        <article className="detail-card">
-          <h4>Scientific context</h4>
-          <p className="soft-copy">{trait.scientificContext}</p>
+          <h4>Why race is too simple</h4>
+          <p className="soft-copy">{trait.whyRaceTooSimple}</p>
         </article>
       </section>
 
-      <section className="method-panel">
+      <section className="takeaway-panel">
         <div>
-          <p className="eyebrow">Methods</p>
-          <h2>How scientists study this pattern</h2>
-          <p>
-            Genetic evidence reveals pattern, but it does not erase history, ethics,
-            or social meaning.
-          </p>
+          <p className="eyebrow">Key takeaway</p>
+          <h2>{trait.keyTakeaway}</h2>
         </div>
-        <div className="method-lines" aria-hidden="true">
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-        <article className="source-note">
-          <strong>Research note</strong>
-          <p>{trait.methodsNote}</p>
-        </article>
-        <article className="source-note">
-          <strong>Wikipedia context</strong>
-          <p>{wikiSummary || 'Supplemental context is loading or unavailable.'}</p>
-        </article>
+        <p>{trait.scientificContext}</p>
       </section>
     </div>
   );
