@@ -4,11 +4,11 @@ import { api } from '../api';
 import { visualAssets } from '../visualData';
 
 const traitImages = {
-  'skin-color': visualAssets.hands,
-  'lactose-tolerance': visualAssets.lactaseMap,
-  'sickle-cell': visualAssets.skinMap,
-  'hair-texture': visualAssets.hairTexture,
-  'ancestry-and-admixture': visualAssets.ancestryMap,
+  'skin-color': visualAssets.iconSkinColor,
+  'lactose-tolerance': visualAssets.iconLactose,
+  'sickle-cell': visualAssets.iconSickle,
+  'hair-texture': visualAssets.iconHairTexture,
+  'ancestry-and-admixture': visualAssets.iconAncestry,
 };
 
 const traitOrder = [
@@ -20,11 +20,11 @@ const traitOrder = [
 ];
 
 const topicSummaries = {
-  'skin-color': 'Variation in pigmentation is shaped by UV exposure.',
-  'lactose-tolerance': 'Milk digestion reflects culture, diet, and adaptation.',
-  'sickle-cell': 'A genetic trait shaped by malaria environments.',
-  'hair-texture': 'Visible traits do not create biological boundaries.',
-  'ancestry-and-admixture': 'Human populations are connected and mixed.',
+  'skin-color': 'A visible trait shaped by adaptation to UV exposure.',
+  'lactose-tolerance': 'An example of human adaptation linked to diet and history.',
+  'sickle-cell': 'A genetic trait connected to malaria environments.',
+  'hair-texture': 'A visible human difference that does not define race.',
+  'ancestry-and-admixture': 'A story of migration, mixing, and shared history.',
 };
 
 function HomePage() {
@@ -76,12 +76,8 @@ function HomePage() {
           </div>
         </div>
 
-        <div className="figure-panel" aria-hidden="true">
-          <div className="globe-lines" />
-          <div className="profile profile-a" />
-          <div className="profile profile-b" />
-          <div className="profile profile-c" />
-          <div className="profile profile-d" />
+        <div className="figure-panel">
+          <img src="/home-hero.svg" alt="Four overlapping human profiles with a globe behind them" />
         </div>
       </section>
 
@@ -97,14 +93,15 @@ function HomePage() {
 
       <section className="topic-grid">
         {traits.map((trait) => (
-          <article className="topic-card" key={trait.slug}>
+          <Link to={`/traits/${trait.slug}`} className="topic-card" key={trait.slug}>
             <div
               className="topic-icon"
               style={{ backgroundImage: `url(${traitImages[trait.slug]})` }}
             />
             <h3>{trait.title}</h3>
             <p>{topicSummaries[trait.slug] || trait.summary}</p>
-          </article>
+            <span>Learn more <span aria-hidden="true">-&gt;</span></span>
+          </Link>
         ))}
       </section>
 

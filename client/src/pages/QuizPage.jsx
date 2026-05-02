@@ -134,7 +134,7 @@ function QuizPage() {
             </div>
             <div
               className="feedback-art"
-              style={{ backgroundImage: `url(${visualAssets.hands})` }}
+              style={{ backgroundImage: `url(${visualAssets.quizFeedbackPeople})` }}
             />
           </section>
 

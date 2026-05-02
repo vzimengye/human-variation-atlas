@@ -5,10 +5,10 @@ import { visualAssets } from '../visualData';
 
 const detailMaps = {
   'skin-color': visualAssets.skinMap,
-  'lactose-tolerance': visualAssets.lactaseMap,
-  'sickle-cell': visualAssets.skinMap,
+  'lactose-tolerance': visualAssets.lactoseDairy,
+  'sickle-cell': visualAssets.sickleCells,
   'hair-texture': visualAssets.hairTexture,
-  'ancestry-and-admixture': visualAssets.ancestryMap,
+  'ancestry-and-admixture': visualAssets.ancestryAdmixtureMap,
 };
 
 function TraitPage() {
@@ -18,20 +18,45 @@ function TraitPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let isActive = true;
+
     async function loadTrait() {
       setLoading(true);
+      setWikiSummary('');
       const traitResponse = await api.get(`/traits/${slug}`);
-      setTrait(traitResponse.data);
+      if (!isActive) {
+        return;
+      }
 
-      const summary = await fetchWikipediaSummary(traitResponse.data.wikipediaTitle);
-      setWikiSummary(summary);
+      setTrait(traitResponse.data);
       setLoading(false);
+
+      try {
+        const summary = await Promise.race([
+          fetchWikipediaSummary(traitResponse.data.wikipediaTitle),
+          new Promise((resolve) => {
+            setTimeout(() => resolve(''), 4000);
+          }),
+        ]);
+
+        if (isActive && summary) {
+          setWikiSummary(summary);
+        }
+      } catch (error) {
+        console.error(error);
+      }
     }
 
     loadTrait().catch((error) => {
       console.error(error);
-      setLoading(false);
+      if (isActive) {
+        setLoading(false);
+      }
     });
+
+    return () => {
+      isActive = false;
+    };
   }, [slug]);
 
   if (loading) {
@@ -100,7 +125,7 @@ function TraitPage() {
         </article>
         <article className="source-note">
           <strong>Wikipedia context</strong>
-          <p>{wikiSummary}</p>
+          <p>{wikiSummary || 'Supplemental context is loading or unavailable.'}</p>
         </article>
       </section>
     </div>

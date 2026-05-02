@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+  <title id="title">Human variation profile illustration</title>
+  <desc id="desc">Four overlapping human side profiles in sage, beige, charcoal, and blue with a pale globe behind them.</desc>
+  <defs>
+    <radialGradient id="paper" cx="50%" cy="42%" r="70%">
+      <stop offset="0%" stop-color="#fffdf7"/>
+      <stop offset="72%" stop-color="#fbf8ef"/>
+      <stop offset="100%" stop-color="#f5f1e7"/>
+    </radialGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="78%" stop-color="#fffdf7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#fffdf7"/>
+    </linearGradient>
+    <pattern id="grain" width="90" height="90" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="18" r="1.2" fill="#2f5e4e" opacity=".18"/>
+      <circle cx="62" cy="25" r="1" fill="#6f8fa8" opacity=".18"/>
+      <circle cx="32" cy="66" r="1.4" fill="#caa873" opacity=".18"/>
+      <circle cx="78" cy="72" r=".8" fill="#2f5e4e" opacity=".14"/>
+    </pattern>
+    <clipPath id="personA">
+      <path d="M162 778c3-94 10-185 18-274 8-80 32-135 76-170-34-26-48-58-44-98 8-91 86-160 191-162 90-2 166 44 182 104 9 36-13 53-51 59-25 5-43 14-55 32-14 23-9 51 18 72 26 21 33 38 20 52-10 11-30 14-48 15-3 47 5 98 22 153 19 64 36 135 49 217H162z"/>
+    </clipPath>
+    <clipPath id="personB">
+      <path d="M424 793c2-87 8-170 17-250 9-75 31-126 66-157-30-24-42-53-38-88 8-80 70-139 153-141 75-2 138 39 151 91 7 31-12 45-45 50-21 4-36 12-46 28-12 20-7 43 15 61 22 17 28 32 17 44-9 9-25 12-40 13-1 42 8 88 26 138 20 57 36 124 47 211H424z"/>
+    </clipPath>
+    <clipPath id="personC">
+      <path d="M650 796c2-84 7-164 15-241 9-78 32-132 68-165-32-24-45-55-41-92 9-78 72-137 154-139 73-1 133 37 147 88 8 31-10 46-42 51-22 4-37 12-47 28-12 19-7 43 16 61 23 19 29 34 18 46-9 9-26 12-42 13 0 43 10 91 28 145 19 57 35 122 45 205H650z"/>
+    </clipPath>
+    <clipPath id="personD">
+      <path d="M840 796c2-82 7-160 15-234 8-73 29-124 64-155-30-24-43-53-39-88 8-75 66-131 142-133 67-2 124 35 137 83 8 30-9 43-39 48-20 4-34 11-43 26-11 19-6 41 15 58 20 16 26 30 16 41-8 9-23 11-37 12 0 41 9 86 25 136 18 55 32 117 42 206H840z"/>
+    </clipPath>
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1f2423" flood-opacity=".08"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="860" fill="url(#paper)"/>
+  <rect width="1200" height="860" fill="url(#grain)"/>
+
+  <g fill="none" stroke="#9ca49e" stroke-opacity=".35" stroke-width="1.5">
+    <ellipse cx="623" cy="300" rx="268" ry="276"/>
+    <ellipse cx="623" cy="300" rx="198" ry="276"/>
+    <ellipse cx="623" cy="300" rx="90" ry="276"/>
+    <path d="M355 301h536M382 190h482M396 416h455M432 88c110 39 269 39 382 0"/>
+    <path d="M338 300c22-171 143-284 285-284s263 113 285 284" stroke-dasharray="9 9"/>
+  </g>
+
+  <g opacity=".55">
+    <circle cx="185" cy="238" r="3" fill="#2f5e4e"/>
+    <circle cx="990" cy="210" r="2.5" fill="#6f8fa8"/>
+    <circle cx="1005" cy="355" r="2" fill="#2f5e4e"/>
+    <circle cx="230" cy="402" r="2.5" fill="#caa873"/>
+    <circle cx="890" cy="108" r="2" fill="#caa873"/>
+    <circle cx="935" cy="450" r="2.2" fill="#6f8fa8"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <g clip-path="url(#personA)">
+      <rect x="130" y="50" width="430" height="760" fill="#5f7e69"/>
+      <path d="M170 690c106 32 244 20 354-18v145H170z" fill="#e6efe8" opacity=".18"/>
+      <path d="M237 522c64 26 146 31 225 12M228 552c73 28 160 32 249 12M220 583c76 28 174 32 268 10M214 614c84 25 185 27 278 8" fill="none" stroke="#ead8bc" stroke-width="3" stroke-dasharray="9 9" opacity=".7"/>
+      <path d="M275 214c31 22 75 23 122 16 46-7 102-7 158 14-5-72-76-126-159-123-82 3-137 41-121 93z" fill="#244b3d"/>
+      <circle cx="382" cy="316" r="6" fill="#1f2423"/>
+      <path d="M408 360c18 7 38 3 51-10" fill="none" stroke="#24312c" stroke-width="3" stroke-linecap="round"/>
+      <path d="M296 322c-28-4-48 14-49 38-1 28 22 48 51 44" fill="none" stroke="#405445" stroke-width="6"/>
+      <path d="M277 334c16 8 25 20 27 39" fill="none" stroke="#405445" stroke-width="4"/>
+    </g>
+
+    <g clip-path="url(#personB)" opacity=".82">
+      <rect x="410" y="130" width="360" height="700" fill="#ead8bc"/>
+      <path d="M442 555l225 225M470 542l235 235M500 530l229 229M532 520l214 214" stroke="#fff6e9" stroke-width="4" opacity=".8"/>
+      <circle cx="661" cy="350" r="5" fill="#705d48"/>
+      <path d="M680 386c14 6 30 2 41-8" fill="none" stroke="#786650" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M510 330c-22-3-38 12-39 31-1 23 17 39 39 36" fill="none" stroke="#d6b88d" stroke-width="5"/>
+    </g>
+
+    <g clip-path="url(#personC)" opacity=".9">
+      <rect x="638" y="132" width="350" height="700" fill="#394c50"/>
+      <path d="M720 190c80 24 148 71 190 147 32 58 42 132 17 203-22 64-17 126 19 199H650V500c-40-78-25-183 70-310z" fill="#26363a" opacity=".7"/>
+      <g fill="none" stroke="#617075" stroke-width="2" opacity=".45">
+        <path d="M715 214c35 20 46 52 23 82s-17 62 17 87 36 58 9 88"/>
+        <path d="M758 198c35 23 43 55 19 85s-18 65 16 89 37 58 11 88"/>
+        <path d="M803 190c36 24 43 58 18 88s-20 65 14 90 39 58 13 90"/>
+        <path d="M848 205c34 25 40 57 17 86s-19 63 14 87 36 57 12 88"/>
+      </g>
+      <circle cx="865" cy="364" r="5" fill="#151d20"/>
+      <path d="M884 397c14 6 29 2 40-8" fill="none" stroke="#151d20" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+
+    <g clip-path="url(#personD)" opacity=".9">
+      <rect x="820" y="150" width="360" height="700" fill="#89aac0"/>
+      <path d="M845 684c78 34 177 33 286 0v130H845z" fill="#fffdf7" opacity=".2"/>
+      <path d="M900 227c45 23 91 25 151 14 48-9 86 6 109 43-10-61-65-103-130-102-66 1-112 17-130 45z" fill="#5f8fb0"/>
+      <circle cx="1041" cy="374" r="5" fill="#2f4856"/>
+      <path d="M1059 406c14 6 29 2 40-8" fill="none" stroke="#2f4856" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <rect y="618" width="1200" height="242" fill="url(#fade)"/>
+</svg>

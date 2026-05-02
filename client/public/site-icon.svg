@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Human Variation Atlas leaf icon</title>
+  <desc id="desc">A sage green leaf branch inside a circle.</desc>
+  <rect width="256" height="256" fill="#fffef9"/>
+  <circle cx="128" cy="128" r="80" fill="none" stroke="#6d8464" stroke-width="8" stroke-linecap="round"/>
+  <g fill="none" stroke="#6d8464" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M110 184c18-34 28-71 31-110"/>
+    <path d="M134 128c22-34 48-46 75-48-7 30-27 52-60 63"/>
+    <path d="M126 107c-23-20-36-43-38-72 28 9 47 30 54 64"/>
+    <path d="M116 150c-27-7-48-23-62-49 29-1 52 12 70 38"/>
+    <path d="M142 80c10-29 28-50 54-64 7 31-4 56-35 78"/>
+    <path d="M86 123c14 13 23 29 28 48"/>
+    <path d="M158 112c16-13 29-20 43-23"/>
+    <path d="M106 72c12 15 21 31 27 48"/>
+  </g>
+</svg>
