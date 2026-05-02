@@ -491,6 +491,25 @@ img {
   font-size: 0.74rem;
 }
 
+.result-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.result-copy h2,
+.result-copy h3 {
+  margin: 0;
+}
+
+.result-copy h2 {
+  font-size: 1rem;
+}
+
+.result-copy h3 {
+  color: var(--green);
+  font-size: 0.86rem;
+}
+
 .callout-dot,
 .feedback-icon {
   width: 28px;
@@ -745,13 +764,14 @@ img {
 .stepper {
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 8px;
+  flex-wrap: wrap;
   margin-bottom: 22px;
 }
 
 .step-dot {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   border: 1px solid var(--border);
   background: var(--surface);
@@ -868,6 +888,12 @@ img {
 .feedback-panel p {
   margin: 0;
   color: var(--ink-soft);
+}
+
+.correct-answer-note {
+  margin-top: 8px !important;
+  color: var(--green) !important;
+  font-weight: 800;
 }
 
 .feedback-art {

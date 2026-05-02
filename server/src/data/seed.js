@@ -103,58 +103,198 @@ export const seedTraits = [
 
 export const seedQuizQuestions = [
   {
-    prompt: 'Which statement best describes human genetic variation?',
+    prompt: 'Which statement best describes human biological variation?',
     options: [
-      'Most genetic variation exists within populations, not between populations.',
-      'Genetic variation is the same in all populations.',
-      'Genetic variation only exists between races.',
-      'Races are determined by a single gene.'
+      'Human traits usually vary in complex patterns, not fixed racial boxes.',
+      'Every racial group has completely separate genes.',
+      'Skin color tells us everything important about a person\'s ancestry.',
+      'Race is always a perfect biological category.'
     ],
     correctAnswer:
-      'Most genetic variation exists within populations, not between populations.'
+      'Human traits usually vary in complex patterns, not fixed racial boxes.',
+    feedback:
+      'Human variation is real, but it does not divide neatly into racial groups. Many traits overlap across populations or change gradually across geography.'
   },
   {
-    prompt: 'What does skin color show in this atlas?',
+    prompt: 'Why is skin color not a good way to divide humans into biological races?',
     options: [
-      'It is shaped partly by UV radiation and environment.',
-      'It determines intelligence and behavior.',
-      'It creates fixed biological races.',
-      'It reveals a person\'s entire ancestry.'
+      'Skin color has no biological basis.',
+      'Skin color is shaped partly by UV radiation and varies gradually across geography.',
+      'Everyone with the same skin color has the same ancestry.',
+      'Skin color is only about culture, not biology.'
     ],
     correctAnswer:
-      'It is shaped partly by UV radiation and environment.'
+      'Skin color is shaped partly by UV radiation and varies gradually across geography.',
+    feedback:
+      'Skin color is biological, but it is not a racial boundary. It is strongly connected to adaptation to sunlight and UV exposure.'
   },
   {
-    prompt: 'Why is lactase persistence useful here?',
+    prompt: 'What does lactose tolerance show about human variation?',
     options: [
-      'It shows that similar adaptations can appear independently in different populations.',
-      'It proves food tolerance belongs to one race.',
-      'It shows all ancient populations digested milk.',
-      'It is unrelated to culture or diet.'
+      'All humans can digest milk equally well.',
+      'Lactose tolerance belongs to one race.',
+      'Similar traits can evolve independently in different populations.',
+      'Diet has no relationship to human evolution.'
     ],
     correctAnswer:
-      'It shows that similar adaptations can appear independently in different populations.'
+      'Similar traits can evolve independently in different populations.',
+    feedback:
+      'Lactose tolerance developed in different populations with histories of milk use. This shows how culture and biology can shape each other.'
   },
   {
-    prompt: 'How should sickle cell trait be understood?',
+    prompt: 'Why is sickle cell trait common in some parts of the world?',
     options: [
-      'Through malaria selection pressure and environmental trade-offs.',
-      'As a trait owned by one race.',
-      'As proof that genes have only harmful effects.',
-      'As unrelated to geography or disease ecology.'
+      'Because it is tied to one race.',
+      'Because carrying one copy of the sickle cell gene can protect against severe malaria.',
+      'Because it only appears in Africa.',
+      'Because it has no connection to environment.'
     ],
     correctAnswer:
-      'Through malaria selection pressure and environmental trade-offs.'
+      'Because carrying one copy of the sickle cell gene can protect against severe malaria.',
+    feedback:
+      'Sickle cell trait is better understood through malaria environments than through race. This is a good example of why geography and disease history matter.'
   },
   {
-    prompt: 'What is the strongest takeaway about ancestry?',
+    prompt: 'What is the best way to understand ancestry?',
     options: [
-      'Human ancestry is connected and mixed, not made of pure biological populations.',
-      'Ancestry and race are exactly the same thing.',
-      'Migration has not shaped human variation.',
-      'Ancestry tests reveal fixed biological races.'
+      'As the exact same thing as race.',
+      'As a fixed label with no overlap.',
+      'As a history of migration, connection, and mixing.',
+      'As something that can always be seen from appearance.'
     ],
     correctAnswer:
-      'Human ancestry is connected and mixed, not made of pure biological populations.'
+      'As a history of migration, connection, and mixing.',
+    feedback:
+      'Ancestry can be meaningful, but it is not simple or pure. Human populations have long histories of movement and connection.'
+  },
+  {
+    prompt: 'Why can visible traits be misleading?',
+    options: [
+      'Because visible traits are always fake.',
+      'Because one visible trait does not tell us the whole story about a person\'s biology or ancestry.',
+      'Because biology only happens inside the body.',
+      'Because all visible traits are caused by culture.'
+    ],
+    correctAnswer:
+      'Because one visible trait does not tell us the whole story about a person\'s biology or ancestry.',
+    feedback:
+      'Traits like skin color or hair texture are real, but they are only small parts of human variation. They cannot explain a person\'s full ancestry, identity, or biology.'
+  },
+  {
+    prompt: 'Which statement about hair texture is most accurate?',
+    options: [
+      'Hair texture creates clear biological races.',
+      'Hair texture varies among humans, but it does not sort people into fixed racial groups.',
+      'People from the same racial category always have the same hair texture.',
+      'Hair texture is not biological at all.'
+    ],
+    correctAnswer:
+      'Hair texture varies among humans, but it does not sort people into fixed racial groups.',
+    feedback:
+      'Hair texture is a real human trait, but it varies in complicated ways. Like skin color, it should not be treated as a simple racial boundary.'
+  },
+  {
+    prompt: 'What does it mean to say that race is "socially real"?',
+    options: [
+      'Race is a perfect biological category.',
+      'Race has no effect on people\'s lives.',
+      'Race is created by society, but it still affects how people are treated.',
+      'Race only matters in history, not today.'
+    ],
+    correctAnswer:
+      'Race is created by society, but it still affects how people are treated.',
+    feedback:
+      'Race is not a precise biological system, but it still has real social consequences. People experience race through institutions, stereotypes, discrimination, and identity.'
+  },
+  {
+    prompt: 'Which example best shows that environment can shape human traits?',
+    options: [
+      'Sickle cell trait being connected to malaria regions.',
+      'A person choosing their favorite color.',
+      'Everyone having the exact same genes.',
+      'Race determining personality.'
+    ],
+    correctAnswer:
+      'Sickle cell trait being connected to malaria regions.',
+    feedback:
+      'Sickle cell trait shows how a genetic trait can become more common in certain environments because it gives some protection against malaria.'
+  },
+  {
+    prompt: 'What is one problem with using race as a shortcut for biology?',
+    options: [
+      'It explains every trait too accurately.',
+      'It ignores the complexity of genetics, environment, ancestry, and history.',
+      'It only works for hair texture.',
+      'It proves that populations never mixed.'
+    ],
+    correctAnswer:
+      'It ignores the complexity of genetics, environment, ancestry, and history.',
+    feedback:
+      'Race is too broad and too political to explain human biology accurately. Human variation depends on many factors, not one label.'
+  },
+  {
+    prompt: 'Which statement is most careful and accurate?',
+    options: [
+      'Race is completely biological.',
+      'Race is completely meaningless.',
+      'Race is socially meaningful, but it does not accurately map human biological variation.',
+      'Race can predict every genetic trait.'
+    ],
+    correctAnswer:
+      'Race is socially meaningful, but it does not accurately map human biological variation.',
+    feedback:
+      'This is the main idea of the project. Race affects society, but it is not a clean biological map.'
+  },
+  {
+    prompt: 'Why should we be careful with ancestry DNA results?',
+    options: [
+      'They are always fake.',
+      'They can be useful, but they are estimates based on reference populations and should not be treated as fixed racial truth.',
+      'They prove that racial groups are pure.',
+      'They show that migration never happened.'
+    ],
+    correctAnswer:
+      'They can be useful, but they are estimates based on reference populations and should not be treated as fixed racial truth.',
+    feedback:
+      'Ancestry tests can tell us something, but they do not reveal a simple or permanent racial identity. The result depends on data, comparison groups, and interpretation.'
+  },
+  {
+    prompt: 'Which statement about human populations is most accurate?',
+    options: [
+      'Human groups have always been completely separate.',
+      'Human populations have mixed and moved throughout history.',
+      'Each population has its own totally separate set of genes.',
+      'Human migration has no effect on biology.'
+    ],
+    correctAnswer:
+      'Human populations have mixed and moved throughout history.',
+    feedback:
+      'Human history includes migration, mixing, and shared ancestry. This is one reason racial categories do not describe biology very well.'
+  },
+  {
+    prompt: 'What is the main lesson from looking at several traits together?',
+    options: [
+      'Every trait follows the same racial pattern.',
+      'Different traits have different histories and patterns of variation.',
+      'All traits are caused by one gene.',
+      'Biology is not relevant to human variation.'
+    ],
+    correctAnswer:
+      'Different traits have different histories and patterns of variation.',
+    feedback:
+      'Skin color, lactose tolerance, sickle cell trait, hair texture, and ancestry do not all follow the same pattern. That is exactly why race is too simple as a biological explanation.'
+  },
+  {
+    prompt: 'Which title best matches the idea of this project?',
+    options: [
+      'Race Explains All Human Difference',
+      'Human Variation Beyond Race',
+      'Biology Does Not Exist',
+      'One Trait, One Race'
+    ],
+    correctAnswer:
+      'Human Variation Beyond Race',
+    feedback:
+      'The project is not saying humans are all identical. It is saying human difference exists, but racial boxes are not a good way to explain it.'
   }
 ];

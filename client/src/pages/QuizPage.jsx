@@ -54,7 +54,10 @@ function QuizPage() {
       <section className="page-heading">
         <div>
           <h1>Test Your Assumptions</h1>
-          <p>Answer a few questions to reflect on what you have learned.</p>
+          <p>
+            These questions are not meant to trick you. They are meant to help you
+            notice when a common idea about race and biology is too simple.
+          </p>
         </div>
         <div className="quiz-stat-strip">
           <span>{stats?.attemptCount ?? 0} attempts</span>
@@ -119,12 +122,15 @@ function QuizPage() {
             <div>
               <h3>{isCorrect ? 'Correct!' : 'Keep thinking'}</h3>
               <p>
-                {isCorrect
-                  ? 'This answer fits the atlas theme: human variation is patterned, contextual, and not reducible to racial categories.'
-                  : selectedAnswer
-                    ? `The strongest answer is: ${currentQuestion.correctAnswer}`
-                    : 'Choose an answer to reveal feedback.'}
+                {selectedAnswer
+                  ? currentQuestion.feedback
+                  : 'Choose an answer to reveal feedback.'}
               </p>
+              {!isCorrect && selectedAnswer && (
+                <p className="correct-answer-note">
+                  Correct answer: {currentQuestion.correctAnswer}
+                </p>
+              )}
             </div>
             <div
               className="feedback-art"
@@ -169,10 +175,21 @@ function QuizPage() {
       <section className="info-callout">
         <span className="callout-dot">i</span>
         {scoreResult ? (
-          <p>
-            You scored {scoreResult.score}%. Human difference becomes clearer when it
-            is read trait by trait, method by method, and in historical context.
-          </p>
+          <div className="result-copy">
+            <h2>Your Result</h2>
+            <h3>You are thinking beyond simple categories.</h3>
+            <p>
+              Human biological variation is real, but it is shaped by many
+              overlapping factors: genetics, environment, migration, culture, diet,
+              disease, and history. Race can affect people&apos;s lives socially,
+              but it is not a precise biological system.
+            </p>
+            <p>
+              <strong>Main takeaway:</strong> People are not less different than we
+              think. They are different in more complicated ways than race can
+              explain.
+            </p>
+          </div>
         ) : (
           <p>
             {answeredCount} of {questions.length} answered. Each question builds on
