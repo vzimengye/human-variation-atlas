@@ -2,19 +2,19 @@ export const seedTraits = [
   {
     slug: 'skin-color',
     title: 'Skin Color',
-    category: 'Clinal variation and adaptation',
+    category: 'UV radiation adaptation',
     keyQuestion:
-      'Why does a highly visible trait vary across geography without producing fixed biological races?',
+      'How can skin color vary across geography without producing fixed biological races?',
     summary:
-      'Skin pigmentation changes gradually across latitude, UV exposure, migration, and ancestry. It is a cline, not a clean racial boundary.',
+      'Skin color varies gradually across geography. One major factor is ultraviolet radiation: darker pigmentation can help protect the body in high-UV environments, while lighter pigmentation can help with vitamin D production in lower-UV environments.',
     whyItMatters:
-      'This trait helps visitors see that one visible feature can shift with ecology and adaptation while still failing to divide humanity into stable natural boxes.',
+      'This trait helps visitors see that a visible feature can shift with ecology and adaptation while still failing to divide humanity into stable natural boxes.',
     commonMyth:
-      'Skin color reveals a person’s total biological ancestry or can sort humanity into a few natural races.',
+      'Skin color reveals a person\'s total biological ancestry or can sort humanity into a few natural races.',
     betterFraming:
-      'Pigmentation is one trait among many. Different traits have different histories, so skin color should not be treated as a shortcut for everything else about a population.',
+      'Skin color is an adaptation to environment, not a measure of intelligence, behavior, or human worth.',
     scientificContext:
-      'Human genetic differentiation is relatively low and much human variation exists within populations rather than between them. Skin color fits that point well because it varies with environment, but it does not predict the rest of the genome.',
+      'Jablonski and Chaplin explain the relationship between skin pigmentation and UV radiation adaptation. Skin color fits the broader point that one visible trait does not predict the rest of the genome.',
     methodsNote:
       'Scientists study pigmentation through maps, allele frequencies, evolutionary models, and comparisons between UV environments and population histories.',
     wikipediaTitle: 'Human skin color'
@@ -26,15 +26,15 @@ export const seedTraits = [
     keyQuestion:
       'How can milk digestion become common in some populations without defining a race?',
     summary:
-      'Lactase persistence shows how cultural practices and population history can shape biology together. It is a strong example of gene-culture coevolution rather than racial essence.',
+      'Some adults can digest milk because they keep producing lactase after childhood. This trait developed independently in different populations, especially in groups with histories of herding and milk use.',
     whyItMatters:
-      'Lactase persistence is linked to migration, selection, and steppe-related gene flow in South Asia, showing that traits spread through historical processes instead of timeless racial categories.',
+      'Lactase persistence shows how cultural practices and population history can shape biology together.',
     commonMyth:
       'If a trait is common in one region, it must naturally define a race from that region.',
     betterFraming:
-      'Lactose tolerance is better understood through dairying history, migration, and selection. Similar outcomes can appear in different populations for historical reasons, not because race is biologically fixed.',
+      'A trait can appear in different places for similar reasons. That does not mean it belongs to one race.',
     scientificContext:
-      'DNA records population history and admixture. Steppe-related gene flow is associated with lactase persistence in South Asia, which makes this trait a case study in ancestry, adaptation, and historical movement all at once.',
+      'Tishkoff et al. show that lactase persistence appeared in Africa and Europe through convergent adaptation: similar dietary and cultural pressures can produce similar adaptations independently.',
     methodsNote:
       'Researchers compare ancient and present-day genomes, trace allele frequency changes through time, and link those patterns to archaeology and food practices.',
     wikipediaTitle: 'Lactase persistence'
@@ -42,39 +42,59 @@ export const seedTraits = [
   {
     slug: 'sickle-cell',
     title: 'Sickle Cell Trait',
-    category: 'Selection and disease ecology',
+    category: 'Malaria selection pressure',
     keyQuestion:
       'What changes when a trait is explained through malaria ecology instead of race?',
     summary:
-      'Sickle cell trait is best understood through malaria environments, mutation, and balancing selection. It is a classic example of why disease traits should not be racialized.',
+      'Sickle cell trait is often wrongly treated as a "racial" trait, but it is better understood through malaria. In places where malaria has been common, carrying one copy of the sickle cell gene can offer some protection against severe malaria.',
     whyItMatters:
-      'This case links genetics to natural selection: the trait persists because heterozygotes can have an advantage in malarial settings, not because one race "owns" the trait.',
+      'This case links genetics to natural selection: the trait persists because heterozygotes can have an advantage in malarial settings.',
     commonMyth:
       'Sickle cell is a trait that belongs to one race.',
     betterFraming:
-      'A better explanation looks at ecology, selection, and population history. Similar selective pressures can produce overlapping patterns across Africa, the Mediterranean, the Middle East, and South Asia.',
+      'Genes can involve trade-offs. Their meaning depends on environment, not racial labels.',
     scientificContext:
-      'Sickle cell is useful because it demonstrates balancing selection: a harmful allele can persist when the heterozygous state offers protection in a specific environment.',
+      'Luzzatto explains the relationship between sickle cell trait and malaria selection pressure. Similar selective pressures can produce overlapping patterns across Africa, the Mediterranean, the Middle East, and South Asia.',
     methodsNote:
       'Scientists compare allele distributions with malaria exposure, model fitness tradeoffs, and examine how migration changes the geography of disease-related traits.',
     wikipediaTitle: 'Sickle cell trait'
   },
   {
-    slug: 'ancestry-and-identity',
-    title: 'Ancestry and Identity',
-    category: 'Interpretation and ethics',
+    slug: 'hair-texture',
+    title: 'Hair Texture',
+    category: 'Visible variation and classification',
     keyQuestion:
-      'Why do ancestry categories look solid in public debate when the underlying history is mixed and statistical?',
+      'Why can a visible trait feel socially obvious while still failing to create a clean biological boundary?',
     summary:
-      'Genetic ancestry can be informative, but ancestry components are statistical constructs, not timeless biological peoples.',
+      'Hair texture varies widely among humans. People often connect hair to race because it is visible, but hair shape and pigmentation are more complicated than everyday racial categories make them seem.',
     whyItMatters:
-      'This section lets the site move beyond visible traits and address broader human questions about identity, belonging, colonialism, nationhood, and the ethics of interpreting genetic data.',
+      'Hair texture helps visitors separate social recognition from biological classification. Visible traits can matter socially without forming fixed natural groups.',
     commonMyth:
-      'DNA can reveal a pure people, settle identity debates, or make morphology and appearance equal to ancestry.',
+      'Hair texture can sort people into simple biological races.',
     betterFraming:
-      'Genetics can illuminate migration and admixture, but identity is never reducible to a pie chart. Kennewick Man, Mexico, and Indigenous genetics debates all show why biological evidence must be interpreted carefully and ethically.',
+      'Visible traits can feel obvious, but they are not simple biological boundaries.',
     scientificContext:
-      'Low human FST, admixture analysis, Kennewick Man, sex-biased admixture in colonial Mexico, and the warning that what looks like an ancestry component may simply be a statistical model all point to the same lesson: interpretation matters as much as measurement.',
+      'Lasisi et al. studied variation in human scalp hair fiber shape and pigmentation, making hair texture a useful example of how visible traits vary without clean racial borders.',
+    methodsNote:
+      'Researchers study hair fiber shape, curl, pigmentation, and population variation while avoiding the assumption that appearance maps neatly onto race.',
+    wikipediaTitle: 'Hair'
+  },
+  {
+    slug: 'ancestry-and-admixture',
+    title: 'Ancestry and Admixture',
+    category: 'Migration, mixing, and history',
+    keyQuestion:
+      'Why should ancestry not be treated as the same thing as race?',
+    summary:
+      'Human populations have never been completely separate. Migration, mixing, and shared history have shaped human ancestry for a long time. Ancestry can tell us something about family history and population history, but it should not be treated as the same thing as race.',
+    whyItMatters:
+      'This section moves beyond visible traits and addresses broader questions about identity, belonging, migration, and the ethics of interpreting genetic data.',
+    commonMyth:
+      'DNA can reveal pure peoples or make appearance equal to ancestry.',
+    betterFraming:
+      'There are no pure biological populations. Human ancestry is connected and mixed.',
+    scientificContext:
+      'Korunes and Goldberg discuss human genetic admixture and how migration and gene flow shape human genetic variation. Ancestry components are useful statistical tools, not pure biological peoples.',
     methodsNote:
       'Researchers use PCA, admixture models, ancient DNA, and FST, but these methods need historical and ethical context.',
     wikipediaTitle: 'Genetic admixture'
@@ -83,43 +103,58 @@ export const seedTraits = [
 
 export const seedQuizQuestions = [
   {
-    prompt: 'Which statement best matches a major theme of this atlas?',
+    prompt: 'Which statement best describes human genetic variation?',
     options: [
-      'Human traits line up into the same racial groups every time.',
-      'Different traits follow different evolutionary and historical paths, so race is not a fixed biological system.',
-      'Visible traits are the most reliable way to classify human populations biologically.'
+      'Most genetic variation exists within populations, not between populations.',
+      'Genetic variation is the same in all populations.',
+      'Genetic variation only exists between races.',
+      'Races are determined by a single gene.'
     ],
     correctAnswer:
-      'Different traits follow different evolutionary and historical paths, so race is not a fixed biological system.'
+      'Most genetic variation exists within populations, not between populations.'
   },
   {
-    prompt: 'What does low human FST suggest in this context?',
+    prompt: 'What does skin color show in this atlas?',
     options: [
-      'Humans show relatively little genetic differentiation between populations compared with many species.',
-      'Human populations are almost entirely separate biological types.',
-      'All genetic variation is between continents rather than within populations.'
+      'It is shaped partly by UV radiation and environment.',
+      'It determines intelligence and behavior.',
+      'It creates fixed biological races.',
+      'It reveals a person\'s entire ancestry.'
     ],
     correctAnswer:
-      'Humans show relatively little genetic differentiation between populations compared with many species.'
+      'It is shaped partly by UV radiation and environment.'
   },
   {
-    prompt: 'Why is lactase persistence such a useful example here?',
+    prompt: 'Why is lactase persistence useful here?',
     options: [
-      'It shows that culture, migration, and selection can shape biology together.',
-      'It proves food tolerance is determined by race.',
-      'It shows all ancient populations digested milk in the same way.'
+      'It shows that similar adaptations can appear independently in different populations.',
+      'It proves food tolerance belongs to one race.',
+      'It shows all ancient populations digested milk.',
+      'It is unrelated to culture or diet.'
     ],
     correctAnswer:
-      'It shows that culture, migration, and selection can shape biology together.'
+      'It shows that similar adaptations can appear independently in different populations.'
   },
   {
-    prompt: 'What is the most accurate takeaway from admixture analysis?',
+    prompt: 'How should sickle cell trait be understood?',
     options: [
-      'Ancestry components always represent real and pure populations from the past.',
-      'Admixture results are statistical tools that must be interpreted with historical caution.',
-      'External appearance is always enough to identify ancestry.'
+      'Through malaria selection pressure and environmental trade-offs.',
+      'As a trait owned by one race.',
+      'As proof that genes have only harmful effects.',
+      'As unrelated to geography or disease ecology.'
     ],
     correctAnswer:
-      'Admixture results are statistical tools that must be interpreted with historical caution.'
+      'Through malaria selection pressure and environmental trade-offs.'
+  },
+  {
+    prompt: 'What is the strongest takeaway about ancestry?',
+    options: [
+      'Human ancestry is connected and mixed, not made of pure biological populations.',
+      'Ancestry and race are exactly the same thing.',
+      'Migration has not shaped human variation.',
+      'Ancestry tests reveal fixed biological races.'
+    ],
+    correctAnswer:
+      'Human ancestry is connected and mixed, not made of pure biological populations.'
   }
 ];

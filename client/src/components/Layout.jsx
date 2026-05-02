@@ -3,8 +3,12 @@ import NavBar from './NavBar';
 function Layout({ children }) {
   return (
     <div className="site-shell">
-      <NavBar />
-      <main className="page-shell app-frame">{children}</main>
+      <main className="page-shell">
+        <section className="screen-frame">
+          <NavBar />
+          <div className="screen-content">{children}</div>
+        </section>
+      </main>
     </div>
   );
 }

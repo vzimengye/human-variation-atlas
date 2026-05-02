@@ -7,18 +7,26 @@ const mosaicImages = {
   'skin-color': visualAssets.hands,
   'lactose-tolerance': visualAssets.lactaseMap,
   'sickle-cell': visualAssets.microscope,
-  'ancestry-and-identity': visualAssets.ancestryMap,
+  'hair-texture': visualAssets.hairTexture,
+  'ancestry-and-admixture': visualAssets.ancestryMap,
   atlas: visualAssets.skinMap,
 };
 
 const fallbackNotes = {
-  'skin-color': 'A visible trait shaped by ecology, movement, and interpretation.',
-  'lactose-tolerance': 'Selection, dairying, and migration intersect here.',
-  'sickle-cell': 'A disease trait best read through malaria ecology and fitness.',
-  'ancestry-and-identity': 'Statistical ancestry is informative, but never the whole story.',
+  'skin-color': 'Skin color is an adaptation to environment, not a measure of intelligence, behavior, or human worth.',
+  'lactose-tolerance': 'A trait can appear in different places for similar reasons. That does not mean it belongs to one race.',
+  'sickle-cell': 'Genes can involve trade-offs. Their meaning depends on environment, not racial labels.',
+  'hair-texture': 'Visible traits can feel obvious, but they are not simple biological boundaries.',
+  'ancestry-and-admixture': 'There are no pure biological populations. Human ancestry is connected and mixed.',
 };
 
-const traitOrder = ['skin-color', 'lactose-tolerance', 'sickle-cell', 'ancestry-and-identity'];
+const traitOrder = [
+  'skin-color',
+  'lactose-tolerance',
+  'sickle-cell',
+  'hair-texture',
+  'ancestry-and-admixture',
+];
 
 function ExplorePage() {
   const [traits, setTraits] = useState([]);
@@ -41,124 +49,68 @@ function ExplorePage() {
     return text.includes(search.toLowerCase());
   });
 
-  const [primary, secondary, tertiary, quaternary] = filteredTraits;
-
   return (
-    <div className="page-grid">
-      <section className="header-shell">
-        <p className="eyebrow" style={{ color: 'var(--accent)' }}>
-          Explore human variation
-        </p>
-        <h2 className="page-title">A curated set of questions</h2>
-        <p className="soft-copy">
-          These sections bring together adaptation, migration, gene-culture
-          coevolution, ancestry modeling, and the social life of biological claims.
-        </p>
+    <div className="canvas-page traits-page">
+      <section className="page-heading">
+        <div>
+          <h1>Traits Are Not Racial Boundaries</h1>
+          <p>
+            The examples below show how human traits vary across populations and
+            environments. Each trait has a biological explanation, but none of them
+            creates a simple line between races.
+          </p>
+        </div>
+        <label className="search-box">
+          <span>Search</span>
+          <input
+            type="text"
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+            placeholder="trait, geography, adaptation..."
+          />
+        </label>
       </section>
 
-      <label className="search-strip">
-        <input
-          type="text"
-          value={search}
-          onChange={(event) => setSearch(event.target.value)}
-          placeholder="Search by trait, geography, adaptation, or social meaning"
+      <section className="trait-list">
+        {filteredTraits.map((trait) => (
+          <article className="trait-row-card" key={trait.slug}>
+            <Link
+              to={`/traits/${trait.slug}`}
+              className="trait-thumb"
+              style={{
+                backgroundImage: `url(${mosaicImages[trait.slug] || visualAssets.hands})`,
+              }}
+              aria-label={`View ${trait.title}`}
+            />
+            <div className="trait-row-copy">
+              <p className="eyebrow">{trait.category}</p>
+              <h2>{trait.title}</h2>
+              <p>{trait.summary}</p>
+              <div className="takeaway-box">
+                <strong>Key takeaway</strong>
+                <span>{fallbackNotes[trait.slug] || trait.betterFraming}</span>
+              </div>
+            </div>
+            <Link to={`/traits/${trait.slug}`} className="button small-button">
+              View details <span aria-hidden="true">-&gt;</span>
+            </Link>
+          </article>
+        ))}
+      </section>
+
+      <section className="pattern-panel">
+        <div
+          className="pattern-map"
+          style={{ backgroundImage: `url(${mosaicImages.atlas})` }}
         />
-        <div className="chip-row">
-          <span className="chip primary">Biology</span>
-          <span className="chip secondary">History</span>
-          <span className="chip secondary">Identity</span>
-        </div>
-      </label>
-
-      <section className="explore-mosaic">
-        <div className="mosaic-left">
-          {primary && (
-            <Link
-              to={`/traits/${primary.slug}`}
-              className="mosaic-large"
-              style={{ backgroundImage: `url(${mosaicImages[primary.slug] || visualAssets.hands})` }}
-            >
-              <div className="mosaic-overlay">
-                <span className="chip secondary">{primary.category}</span>
-                <h3 className="mosaic-title">{primary.title}</h3>
-                <p className="mosaic-note">{fallbackNotes[primary.slug] || primary.summary}</p>
-              </div>
-            </Link>
-          )}
-        </div>
-
-        <div className="mosaic-right">
-          {secondary && (
-            <Link
-              to={`/traits/${secondary.slug}`}
-              className="mosaic-small"
-              style={{
-                backgroundImage: `url(${mosaicImages[secondary.slug] || visualAssets.lactaseMap})`,
-              }}
-            >
-              <div className="mosaic-overlay">
-                <span className="chip secondary">{secondary.category}</span>
-                <h3 className="mosaic-title">{secondary.title}</h3>
-              </div>
-            </Link>
-          )}
-
-          {tertiary && (
-            <Link
-              to={`/traits/${tertiary.slug}`}
-              className="mosaic-small"
-              style={{
-                backgroundImage: `url(${mosaicImages[tertiary.slug] || visualAssets.microscope})`,
-              }}
-            >
-              <div className="mosaic-overlay">
-                <span className="chip secondary">{tertiary.category}</span>
-                <h3 className="mosaic-title">{tertiary.title}</h3>
-              </div>
-            </Link>
-          )}
-        </div>
-      </section>
-
-      <article
-        className="mosaic-banner"
-        style={{ backgroundImage: `url(${mosaicImages.atlas})` }}
-      >
-        <div className="mosaic-overlay">
-          <span className="chip secondary">Pattern atlas</span>
-          <h3 className="mosaic-title">
-            Maps, gradients, and
-            <br />
-            distribution matter.
-          </h3>
-          <p className="mosaic-note">
-            Clines, allele frequencies, FST, and admixture are ways of seeing variation
-            as pattern and history rather than forcing it into fixed racial boxes.
+        <div>
+          <p className="eyebrow">Pattern atlas</p>
+          <h2>Maps and gradients are better than fixed boxes.</h2>
+          <p>
+            Clines, allele frequencies, FST, and admixture help visitors read
+            variation as pattern and history.
           </p>
         </div>
-      </article>
-
-      <section className="bottom-actions">
-        <article className="metric-card" style={{ background: 'var(--ink)', color: 'var(--surface)' }}>
-          <p className="metric-label" style={{ color: 'var(--sage)' }}>
-            Read
-          </p>
-          <p className="metric-value" style={{ color: 'var(--surface)' }}>
-            FST
-          </p>
-        </article>
-        <article className="metric-card">
-          <p className="metric-label">Compare</p>
-          <p className="metric-value">Selection</p>
-        </article>
-        <article className="metric-card warm">
-          <p className="metric-label">Question</p>
-          <p className="metric-value">Admixture</p>
-        </article>
-        <article className="metric-card">
-          <p className="metric-label">Interpret</p>
-          <p className="metric-value">{quaternary?.title || 'Identity'}</p>
-        </article>
       </section>
     </div>
   );

@@ -7,7 +7,8 @@ const detailMaps = {
   'skin-color': visualAssets.skinMap,
   'lactose-tolerance': visualAssets.lactaseMap,
   'sickle-cell': visualAssets.skinMap,
-  'ancestry-and-identity': visualAssets.ancestryMap,
+  'hair-texture': visualAssets.hairTexture,
+  'ancestry-and-admixture': visualAssets.ancestryMap,
 };
 
 function TraitPage() {
@@ -42,23 +43,25 @@ function TraitPage() {
   }
 
   return (
-    <div className="page-grid">
-      <section className="detail-header">
-        <div>
-          <p className="eyebrow" style={{ color: 'var(--accent)' }}>
-            {trait.category}
-          </p>
-          <h2 className="page-title">{trait.title}</h2>
-          <p className="soft-copy">{trait.summary}</p>
-        </div>
+    <div className="canvas-page trait-detail-page">
+      <section className="detail-hero">
         <div
-          className="detail-map"
+          className="detail-art"
           style={{ backgroundImage: `url(${detailMaps[slug] || visualAssets.skinMap})` }}
         />
+        <div className="detail-hero-copy">
+          <p className="eyebrow">{trait.category}</p>
+          <h1>{trait.title}</h1>
+          <p>{trait.summary}</p>
+          <div className="takeaway-box">
+            <strong>Central question</strong>
+            <span>{trait.keyQuestion}</span>
+          </div>
+        </div>
       </section>
 
       <section className="detail-grid">
-        <article className="detail-card">
+        <article className="detail-card highlight">
           <h4>Why it matters</h4>
           <p className="soft-copy">{trait.whyItMatters}</p>
         </article>
@@ -76,25 +79,29 @@ function TraitPage() {
         </article>
       </section>
 
-      <section className="detail-context">
-        <h3 className="context-title">How scientists study this pattern</h3>
-        <p className="soft-copy">
-          Genetic evidence always needs careful interpretation. Methods like FST,
-          ancient DNA, admixture analysis, and evolutionary modeling reveal pattern, but
-          they do not erase history, ethics, or social meaning.
-        </p>
-        <div className="line-stack">
-          <div className="line" />
-          <div className="line short" />
-          <div className="line" />
-          <div className="line tiny" />
+      <section className="method-panel">
+        <div>
+          <p className="eyebrow">Methods</p>
+          <h2>How scientists study this pattern</h2>
+          <p>
+            Genetic evidence reveals pattern, but it does not erase history, ethics,
+            or social meaning.
+          </p>
         </div>
-        <p className="soft-copy detail-method-note">
-          {trait.methodsNote}
-        </p>
-        <p className="soft-copy" style={{ marginTop: '1rem' }}>
-          {wikiSummary}
-        </p>
+        <div className="method-lines" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+        <article className="source-note">
+          <strong>Research note</strong>
+          <p>{trait.methodsNote}</p>
+        </article>
+        <article className="source-note">
+          <strong>Wikipedia context</strong>
+          <p>{wikiSummary}</p>
+        </article>
       </section>
     </div>
   );

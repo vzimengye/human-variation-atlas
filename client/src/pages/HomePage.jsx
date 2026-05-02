@@ -7,10 +7,25 @@ const traitImages = {
   'skin-color': visualAssets.hands,
   'lactose-tolerance': visualAssets.lactaseMap,
   'sickle-cell': visualAssets.skinMap,
-  'ancestry-and-identity': visualAssets.ancestryMap,
+  'hair-texture': visualAssets.hairTexture,
+  'ancestry-and-admixture': visualAssets.ancestryMap,
 };
 
-const traitOrder = ['skin-color', 'lactose-tolerance', 'sickle-cell', 'ancestry-and-identity'];
+const traitOrder = [
+  'skin-color',
+  'lactose-tolerance',
+  'sickle-cell',
+  'hair-texture',
+  'ancestry-and-admixture',
+];
+
+const topicSummaries = {
+  'skin-color': 'Variation in pigmentation is shaped by UV exposure.',
+  'lactose-tolerance': 'Milk digestion reflects culture, diet, and adaptation.',
+  'sickle-cell': 'A genetic trait shaped by malaria environments.',
+  'hair-texture': 'Visible traits do not create biological boundaries.',
+  'ancestry-and-admixture': 'Human populations are connected and mixed.',
+};
 
 function HomePage() {
   const [traits, setTraits] = useState([]);
@@ -33,143 +48,88 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="editorial-page">
-      <section className="editorial-hero">
-        <article
-          className="hero-image-card"
-          style={{ backgroundImage: `url(${visualAssets.hands})` }}
-        >
-          <div className="hero-copy">
-            <p className="eyebrow">Biology, history, and identity</p>
-            <h2 className="display-title">
-              Human variation is real.
-              <br />
-              Fixed racial boxes are not.
-            </h2>
-          </div>
-        </article>
-
-        <aside className="hero-side-card">
-          <p className="eyebrow">Public-facing knowledge atlas</p>
-          <div className="hero-chip" />
-          <h3 className="hero-side-title">
-            Variation links
+    <div className="canvas-page">
+      <section className="home-hero">
+        <div className="hero-panel">
+          <p className="eyebrow">Biology, history, and identity</p>
+          <h1 className="display-title">
+            Human Variation
             <br />
-            adaptation,
-            <br />
-            ancestry,
-            <br />
-            and interpretation.
-          </h3>
-          <p className="soft-copy hero-side-copy">
-            This site uses genetics, migration, selection, and ethics to show why
-            visible difference should never be mistaken for a complete biological map.
+            Beyond Race
+          </h1>
+          <p className="hero-text">
+            Human differences are real, but they do not fit neatly into racial boxes.
           </p>
-        </aside>
-      </section>
-
-      <section className="pill-row">
-        <article className="metric-card">
-          <p className="metric-label">4 case studies</p>
-          <p className="metric-value">Traits + interpretation</p>
-        </article>
-        <article className="metric-card">
-          <p className="metric-label">Low human FST</p>
-          <p className="metric-value">Most variation is within populations</p>
-        </article>
-        <article className="metric-card">
-          <p className="metric-label">Methods in view</p>
-          <p className="metric-value">Ancient DNA, maps, admixture, context</p>
-        </article>
-        <article className="metric-card warm">
-          <p className="metric-label">Interactive quiz</p>
-          <p className="metric-value">
-            Read patterns,
-            <br />
-            {stats?.attemptCount ?? 0} attempts
+          <p className="intro-copy">
+            Human biological variation is shaped by many things: genetics,
+            environment, migration, disease, diet, history, and culture. Traits can
+            tell us something about adaptation and history, but they do not divide
+            people into fixed biological races.
           </p>
-        </article>
-      </section>
-
-      <section className="home-lower-grid">
-        <article className="editorial-card editorial-note">
-          <div
-            className="editorial-photo"
-            style={{ backgroundImage: `url(${visualAssets.microscope})` }}
-          />
-          <div>
-            <p className="eyebrow" style={{ color: 'var(--accent)' }}>
-              Editorial note
-            </p>
-            <h3 className="section-title">
-              Genetics
-              <br />
-              needs
-              <br />
-              context.
-            </h3>
-            <p className="body-copy">
-              Genetics is powerful, but it never speaks on its own. Models of ancestry,
-              visible traits, and population history all need interpretation, and they
-              become most meaningful when read with historical and social context.
-            </p>
-          </div>
-        </article>
-
-        <section className="feature-cluster">
-          {traits[0] && (
-            <Link
-              to={`/traits/${traits[0].slug}`}
-              className="feature-tile"
-              style={{ backgroundImage: `url(${traitImages[traits[0].slug]})` }}
-            >
-              <div className="feature-text">
-                <h3 className="feature-title">{traits[0].title}</h3>
-                <p className="feature-note">Clines, UV exposure, migration</p>
-              </div>
+          <div className="action-row">
+            <Link className="button primary-button" to="/explore">
+              Explore Traits <span aria-hidden="true">-&gt;</span>
             </Link>
-          )}
-
-          <div className="feature-stack">
-            {traits[1] && (
-              <Link
-                to={`/traits/${traits[1].slug}`}
-                className="feature-banner"
-                style={{ backgroundImage: `url(${traitImages[traits[1].slug]})` }}
-              >
-                <div className="feature-text">
-                  <h3 className="feature-title">{traits[1].title}</h3>
-                  <p className="feature-note">Gene-culture coevolution</p>
-                </div>
-              </Link>
-            )}
-            {traits[2] && (
-              <Link
-                to={`/traits/${traits[2].slug}`}
-                className="feature-banner"
-                style={{ backgroundImage: `url(${traitImages[traits[2].slug]})` }}
-              >
-                <div className="feature-text">
-                  <h3 className="feature-title">{traits[2].title}</h3>
-                  <p className="feature-note">Balancing selection and malaria</p>
-                </div>
-              </Link>
-            )}
+            <Link className="button secondary-button" to="/quiz">
+              Take the Quiz
+            </Link>
           </div>
-        </section>
+        </div>
+
+        <div className="figure-panel" aria-hidden="true">
+          <div className="globe-lines" />
+          <div className="profile profile-a" />
+          <div className="profile profile-b" />
+          <div className="profile profile-c" />
+          <div className="profile profile-d" />
+        </div>
       </section>
 
-      <section className="deep-panel">
-        <p className="eyebrow">Why this matters</p>
-        <h3 className="section-title" style={{ color: 'var(--surface)' }}>
-          Bodies carry adaptation,
-          <br />
-          history, and meaning at once.
-        </h3>
-        <p className="soft-copy deep-panel-copy">
-          This atlas is designed for people who are curious about human difference and
-          want a more careful language for thinking about traits, ancestry, race, and
-          belonging.
+      <section className="section-intro">
+        <div>
+          <h2 className="section-title">Explore Key Topics</h2>
+        </div>
+        <p className="soft-copy">
+          Each topic opens a compact case study with one myth, one better frame, and
+          a clear methods note.
+        </p>
+      </section>
+
+      <section className="topic-grid">
+        {traits.map((trait) => (
+          <article className="topic-card" key={trait.slug}>
+            <div
+              className="topic-icon"
+              style={{ backgroundImage: `url(${traitImages[trait.slug]})` }}
+            />
+            <h3>{trait.title}</h3>
+            <p>{topicSummaries[trait.slug] || trait.summary}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="thesis-card">
+        <div className="thesis-icon" aria-hidden="true" />
+        <div>
+          <h2>Our Thesis</h2>
+          <p>
+            Race matters socially because people are treated differently based on
+            it. But race is not a clean biological map of human variation. Most
+            human traits are more complex, more mixed, and more connected to
+            context than racial categories suggest.
+          </p>
+        </div>
+        <div className="mini-stats">
+          <span>{stats?.attemptCount ?? 0}</span>
+          <p className="mini-note">quiz attempts</p>
+        </div>
+      </section>
+
+      <section className="info-callout">
+        <span className="callout-dot">i</span>
+        <p>
+          Use the Traits page to browse evidence, then test the same ideas through
+          the interactive quiz.
         </p>
       </section>
     </div>

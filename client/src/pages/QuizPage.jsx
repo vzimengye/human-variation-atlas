@@ -7,6 +7,7 @@ function QuizPage() {
   const [answers, setAnswers] = useState({});
   const [scoreResult, setScoreResult] = useState(null);
   const [stats, setStats] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     async function loadQuiz() {
@@ -21,8 +22,10 @@ function QuizPage() {
     loadQuiz().catch(console.error);
   }, []);
 
-  async function handleSubmit(event) {
-    event.preventDefault();
+  async function saveScore() {
+    if (!questions.length) {
+      return;
+    }
 
     let correct = 0;
     questions.forEach((question) => {
@@ -39,93 +42,144 @@ function QuizPage() {
     setStats(statsResponse.data);
   }
 
+  const currentQuestion = questions[currentIndex];
+  const selectedAnswer = currentQuestion ? answers[currentQuestion._id] : '';
+  const isCorrect =
+    currentQuestion && selectedAnswer === currentQuestion.correctAnswer;
+  const answeredCount = questions.filter((question) => answers[question._id]).length;
+  const progress = questions.length ? ((currentIndex + 1) / questions.length) * 100 : 0;
+
   return (
-    <div className="quiz-page">
-      <section className="header-shell">
-        <p className="eyebrow" style={{ color: 'var(--accent)' }}>
-          Interactive
-        </p>
-        <h2 className="page-title">Test your assumptions</h2>
-        <p className="soft-copy">
-          A short quiz on low human differentiation, clines, selection, admixture, and
-          careful interpretation.
-        </p>
-      </section>
-
-      <section className="metric-row">
-        <article className="metric-card">
-          <p className="metric-label">Attempts</p>
-          <p className="metric-value">{stats?.attemptCount ?? 0}</p>
-        </article>
-        <article className="metric-card">
-          <p className="metric-label">Average score</p>
-          <p className="metric-value">{stats?.averageScore ?? 0}%</p>
-        </article>
-        <article className="metric-card">
-          <p className="metric-label">What this quiz measures</p>
-          <p className="metric-value">concept recognition</p>
-        </article>
-      </section>
-
-      <form className="quiz-stack" onSubmit={handleSubmit}>
-        {questions.map((question, index) => (
-          <article key={question._id} className="question-shell">
-            <div className="question-head">
-              <span className="question-mark">Q{index + 1}</span>
-              <div className="question-copy">
-                <h3 className="question-title">{question.prompt}</h3>
-                <div className="option-list">
-                  {question.options.map((option) => (
-                    <label className="option-row" key={option}>
-                      <input
-                        type="radio"
-                        name={question._id}
-                        value={option}
-                        checked={answers[question._id] === option}
-                        onChange={(event) =>
-                          setAnswers((current) => ({
-                            ...current,
-                            [question._id]: event.target.value,
-                          }))
-                        }
-                      />
-                      <span>{option}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </article>
-        ))}
-
-        <div className="quiz-footer">
-          <button type="submit" className="dark-button">
-            Save the Answer
-          </button>
-
-          <div
-            className="answer-thumb"
-            style={{ backgroundImage: `url(${visualAssets.hands})` }}
-          />
-
-          {scoreResult ? (
-            <section className="result-shell">
-              <h3 className="result-title">Result Report</h3>
-              <p className="soft-copy">
-                You scored {scoreResult.score}%. Human difference becomes clearer when
-                it is read trait by trait, method by method, and in historical context.
-              </p>
-            </section>
-          ) : (
-            <section className="result-shell">
-              <h3 className="result-title">Result Report</h3>
-              <p className="soft-copy">
-                Submit your answers to see how the quiz connects biology with the need to avoid racial simplification.
-              </p>
-            </section>
-          )}
+    <div className="canvas-page quiz-page">
+      <section className="page-heading">
+        <div>
+          <h1>Test Your Assumptions</h1>
+          <p>Answer a few questions to reflect on what you have learned.</p>
         </div>
-      </form>
+        <div className="quiz-stat-strip">
+          <span>{stats?.attemptCount ?? 0} attempts</span>
+          <span>{stats?.averageScore ?? 0}% average</span>
+        </div>
+      </section>
+
+      <section className="stepper" aria-label="Quiz progress">
+        {questions.map((question, index) => (
+          <button
+            type="button"
+            className={`step-dot ${index === currentIndex ? 'active' : ''} ${
+              answers[question._id] ? 'answered' : ''
+            }`}
+            key={question._id}
+            onClick={() => setCurrentIndex(index)}
+          >
+            {index + 1}
+          </button>
+        ))}
+      </section>
+
+      {currentQuestion && (
+        <section className="quiz-card">
+          <div className="progress-bar" aria-hidden="true">
+            <span style={{ width: `${progress}%` }} />
+          </div>
+          <p className="mini-note">
+            {currentIndex + 1} / {questions.length}
+          </p>
+          <h2>{currentQuestion.prompt}</h2>
+          <div className="option-list">
+            {currentQuestion.options.map((option, optionIndex) => (
+              <label
+                className={`answer-option ${
+                  selectedAnswer === option ? 'selected' : ''
+                }`}
+                key={option}
+              >
+                <input
+                  type="radio"
+                  name={currentQuestion._id}
+                  value={option}
+                  checked={selectedAnswer === option}
+                  onChange={(event) =>
+                    setAnswers((current) => ({
+                      ...current,
+                      [currentQuestion._id]: event.target.value,
+                    }))
+                  }
+                />
+                <span className="answer-letter">
+                  {String.fromCharCode(65 + optionIndex)}
+                </span>
+                <span>{option}</span>
+              </label>
+            ))}
+          </div>
+
+          <section className={`feedback-panel ${selectedAnswer ? 'visible' : ''}`}>
+            <div className="feedback-icon">{isCorrect ? 'OK' : 'i'}</div>
+            <div>
+              <h3>{isCorrect ? 'Correct!' : 'Keep thinking'}</h3>
+              <p>
+                {isCorrect
+                  ? 'This answer fits the atlas theme: human variation is patterned, contextual, and not reducible to racial categories.'
+                  : selectedAnswer
+                    ? `The strongest answer is: ${currentQuestion.correctAnswer}`
+                    : 'Choose an answer to reveal feedback.'}
+              </p>
+            </div>
+            <div
+              className="feedback-art"
+              style={{ backgroundImage: `url(${visualAssets.hands})` }}
+            />
+          </section>
+
+          <div className="quiz-controls">
+            <button
+              type="button"
+              className="button secondary-button"
+              onClick={() => setCurrentIndex((index) => Math.max(0, index - 1))}
+              disabled={currentIndex === 0}
+            >
+              &lt; Previous
+            </button>
+
+            {currentIndex < questions.length - 1 ? (
+              <button
+                type="button"
+                className="button primary-button"
+                onClick={() =>
+                  setCurrentIndex((index) => Math.min(questions.length - 1, index + 1))
+                }
+              >
+                Next Question <span aria-hidden="true">-&gt;</span>
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="button primary-button"
+                onClick={saveScore}
+                disabled={answeredCount < questions.length}
+              >
+                Save Score <span aria-hidden="true">-&gt;</span>
+              </button>
+            )}
+          </div>
+        </section>
+      )}
+
+      <section className="info-callout">
+        <span className="callout-dot">i</span>
+        {scoreResult ? (
+          <p>
+            You scored {scoreResult.score}%. Human difference becomes clearer when it
+            is read trait by trait, method by method, and in historical context.
+          </p>
+        ) : (
+          <p>
+            {answeredCount} of {questions.length} answered. Each question builds on
+            key ideas about human variation and context.
+          </p>
+        )}
+      </section>
     </div>
   );
 }
